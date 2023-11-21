@@ -15,18 +15,26 @@ export const counterSlice = createSlice({
       state.password = action.payload;
       state.token = action.payload;
     },
+
+
     bucket: (state, action) => {
       state.order = action.payload
     },
+
+
     incrementQuantity: (state, action) => {
       const { index } = action.payload;
       state.order[index].quantity += 1;
     },
+
+
     decrementQuantity: (state, action) => {
       const { index } = action.payload;
       if (state.order[index].quantity > 0) {
         state.order[index].quantity -= 1;
     }},
+
+    
     deleteOrder: (state, action) => {
       const index = action.payload;
       state.order.splice(index, 1);
