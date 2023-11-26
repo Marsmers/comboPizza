@@ -4,21 +4,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { bucket } from "../Redux/Reducers";
 import styles from '../Components/menuContainer/Pizza/Pizza.module.css';
 
-export default function Func() {
+const Func = () => {
     const [pizza, setPizza] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
-    const [pizzaSizes, setPizzaSizes] = useState({ Size: "30см" })
-    const [selectedPizzaIndex, setSelectedPizzaIndex] = useState(null);
-
-
-
-
-    // Замовлення зберігається в Redux сторінці
+    const [pizzaSizes, setPizzaSizes] = useState({ Size: "35см" });
+    const [cheeseCrusts, setCheeseCrusts] = useState({});
     const order = useSelector((state) => state.counter.order);
     const dispatch = useDispatch();
+    const cheeseCrustPrice = ({ "35см": 45, "47см": 75 });
 
-    // Ефект для завантаження початкових даних піц
     useEffect(() => {
         axios
             .get("http://localhost:8080/public/product?direction=ASC&field=name&page=0&productType=PIZZA&size=8")
@@ -26,55 +21,55 @@ export default function Func() {
                 setPizza(response.data.data);
                 setTotalPages(response.data.totalPages);
                 const defaultSizes = {};
+                const defaultCheeseCrusts = {};
                 response.data.data.forEach((_, index) => {
-                    defaultSizes[index] = "30см";
+                    defaultSizes[index] = "35см";
+                    defaultCheeseCrusts[index] = false;
                 });
                 setPizzaSizes(defaultSizes);
+                setCheeseCrusts(defaultCheeseCrusts);
             })
             .catch((error) => {
                 console.error("Помилка отримання даних:", error);
             });
     }, []);
 
-
-
     const handleSizeChange = (index, size) => {
-        setSelectedPizzaIndex(index);
         setPizzaSizes((prevSizes) => ({ ...prevSizes, [index]: size }));
     };
 
+    const handleCheeseCrustChange = (index) => {
+        setCheeseCrusts((prevCheeseCrusts) => ({
+            ...prevCheeseCrusts,
+            [index]: !prevCheeseCrusts[index],
+        }));
+    };
 
-    const setOrder = (Name, Id, Price, Image, Sizes) => {
-        const selectedSize = Sizes[selectedPizzaIndex] || "30см";
-
-        const existingItem = order.find((item) => item.Id === Id && item.Size === selectedSize);
+    const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
+        const existingItem = order.find(
+            (item) => item.Id === Id && item.Size === Size && item.hasCheeseCrust === hasCheeseCrust
+        );
 
         if (existingItem) {
             dispatch(
                 bucket(
                     order.map((item) =>
-                        item.Id === Id && item.Size === selectedSize ? { ...item, quantity: item.quantity + 1 } : item
-                    )
-                )
-            );
+                        item.Id === Id && item.Size === Size && item.hasCheeseCrust === hasCheeseCrust
+                            ? { ...item, quantity: item.quantity + 1 } : item)));
         } else {
             dispatch(
                 bucket([
                     ...order,
-                    { Name, Id, Price, Image, Size: selectedSize, quantity: 1 },
-                ])
-            );
-        }
-    };
+                    {
+                        Name,
+                        Id,
+                        Price: Price + (hasCheeseCrust ? cheeseCrustPrice[Size] : 0),
+                        Image,
+                        Size,
+                        quantity: 1,
+                        hasCheeseCrust,
+                    }]))}};
 
-
-
-
-
-
-
-
-    // Функція для завантаження додаткових піц при кліці на "Показати ще"
     const loadMorePizza = () => {
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
@@ -84,11 +79,14 @@ export default function Func() {
                     setPizza((prevPizza) => [...prevPizza, ...response.data.data]);
                     setCurrentPage(nextPage);
                     setTotalPages(response.data.totalPages);
-                    const defaultSize = { ...pizzaSizes }
+                    const defaultSize = { ...pizzaSizes };
+                    const defaultCheeseCrusts = { ...cheeseCrusts };
                     pizza.forEach((_, index) => {
-                        defaultSize[index] = "30см";
+                        defaultSize[index] = "35см";
+                        defaultCheeseCrusts[index] = false;
                     });
                     setPizzaSizes(defaultSize);
+                    setCheeseCrusts(defaultCheeseCrusts);
                 })
                 .catch((error) => {
                     console.error("Помилка отримання даних:", error);
@@ -96,27 +94,10 @@ export default function Func() {
         }
     };
 
-    useEffect(() => {
-        const defaultSizes = pizza.map(() => "30см");
-        setPizzaSizes(defaultSizes);
-    }, [pizza])
-
-
     const pizzaPrice = (size, pizza) => {
-        if (size === "30см") {
-            return pizza.price;
-        } else {
-            return pizza.productVariants[0].price;
-
-        }
+        return size === "35см" ? pizza.price : pizza.productVariants[0].price;
     };
 
-
-
-
-
-
-    console.log(pizza)
     return (
         <>
             {pizza.map((pizza, index) => (
@@ -124,39 +105,66 @@ export default function Func() {
                     <div className={styles["img-card"]}>
                         <img className={styles["card-img"]} src={pizza.mainImageUrl} alt="" />
                     </div>
-                    <h1>{pizza.name}</h1>
-                    <p>Інгредієнти: {pizza.ingredients.join(", ")}</p>
+                    <div className={styles.cardText}>
+                        <h2 className={styles.pizzaName}>{pizza.name}</h2>
+                        <p className={styles.ingredients}> {pizza.ingredients.join(", ")}</p>
+                    </div>
                     <div className={styles.footerCard}>
                         <div className={styles.sizeBtn}>
-                            <button className={`${styles.btnSizeLeft}
-                                ${pizzaSizes[index] === "30см" ? styles.active : ""}`}
-                                onClick={() => handleSizeChange(index, "30см")}>30см
+                            <button
+                                className={`${styles.btnSizeLeft} ${pizzaSizes[index] === "35см" ? styles.active : ""}`}
+                                onClick={() => handleSizeChange(index, "35см")}
+                            >
+                                35см
                             </button>
-                            <button className={`${styles.btnSizeRigth} 
-                                ${pizzaSizes[index] === "40см" ? styles.active : ""}`}
-                                onClick={() => handleSizeChange(index, "40см")}>40см
+                            <button
+                                className={`${styles.btnSizeRigth} ${pizzaSizes[index] === "47см" ? styles.active : ""}`}
+                                onClick={() => handleSizeChange(index, "47см")}
+                            >
+                                47см
                             </button>
                         </div>
+                        <button
+                            className={`${styles.btnCheeseCrust} ${cheeseCrusts[index] ? styles.active : ""}`}
+                            onClick={() => handleCheeseCrustChange(index)}
+                        >
+                            Сирний бортик
+                        </button>
                         <div className={styles.footerBottom}>
-                            <h3>
+                            <h3 className={styles.cardFooterPrice}>
                                 Ціна:
-                                {pizzaSizes[index] === "40см" ? pizzaPrice("40см", pizza) : pizzaPrice("30см", pizza)}
+                                {pizzaSizes[index] === "47см"
+                                    ? pizzaPrice("47см", pizza) + (cheeseCrusts[index] ? cheeseCrustPrice["47см"] : 0)
+                                    : pizzaPrice("35см", pizza) + (cheeseCrusts[index] ? cheeseCrustPrice["35см"] : 0)}
                             </h3>
-                            <button onClick={() => setOrder(
-                                pizza.name,
-                                pizza.id,
-                                pizzaSizes[index] === "40см" ? pizzaPrice("40см", pizza) : pizzaPrice("30см", pizza),
-                                pizza.mainImageUrl,
-                                pizzaSizes,)}>
+                            <button
+                                className={styles.btnOrder}
+                                onClick={() =>
+                                    setOrder(
+                                        pizza.name,
+                                        pizza.id,
+                                        pizzaPrice(pizzaSizes[index], pizza),
+                                        pizza.mainImageUrl,
+                                        pizzaSizes[index],
+                                        cheeseCrusts[index],
+                                        index
+                                    )
+                                }
+                            >
                                 <img className={styles.basketImgBtn} src="korz.png" alt="" />
+                                Хочу
                             </button>
                         </div>
                     </div>
                 </div>
             ))}
             {currentPage < totalPages - 1 && (
-                <button className={styles.BtnNextPage} onClick={loadMorePizza}>Показати ще</button>
+                <button className={styles.BtnNextPage} onClick={loadMorePizza}>
+                    Показати ще
+                </button>
             )}
         </>
-    )
-}
+    );
+};
+
+export default Func;

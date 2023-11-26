@@ -15,6 +15,7 @@
 }
 
 .card {
+    font-family: 'Nunito', sans-serif;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -27,7 +28,23 @@
     font-size: 13px;
     overflow: hidden;
 }
+.cardText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    height: 20%;
+}
 
+.pizzaName{
+    margin: 0px;
+    margin-left: 5px;
+}
+
+.ingredients{
+    margin: 5px;
+    color: gray;
+}
 .card:hover {
     scale: 105%;
     box-shadow: 5px 5px 25px gray;
@@ -62,12 +79,18 @@
     align-items: center;
     justify-content: end;
     width: 100%;
-    height: 20%;
+    height: 25%;
+}
+
+.cardFooterPrice{
+    margin: 0;
+    width: 50%;
+    text-align: center;
 }
 
 .footerBottom{
     width: 100%;
-    height: 60%;
+    height: 40%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,6 +99,9 @@
 
 .sizeBtn{
     width: 100%;
+    height: 100%;
+    display: flex;
+
 }
 
 
@@ -83,8 +109,9 @@
 .btnSizeLeft{
     width: 50%;
     height: 100%;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 5px 0px 0px 5px;
     font-size: medium;
+    border: 1px solid white;
 }
 
 
@@ -94,12 +121,16 @@
     color: white;
 }
 
+.btnSizeLeft:active{
+    scale: 95%;
+}
 
 .btnSizeRigth{
     width: 50%;
     height: 100%;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 5px 5px 0px;
     font-size: medium;
+    border: 1px solid white;
 }
 
 .btnSizeRigth:hover{
@@ -107,16 +138,26 @@
     color: white;
 }
 
+.btnSizeRigth:active{
+    scale: 95%;
+}
+
+.btnCheeseCrust{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    font-size: medium;
+    border: 1px solid white;
+}
+
+
 .footerBottom button{
     width: 50%;
     height: 100%;
 }
 
-.footerBottom h3{
-    margin-left: 5%;
-}
+
 .basketImgBtn {
-    margin: 5px;
     object-fit: contain;
     width: 70%;
     height: 70%;
@@ -135,5 +176,15 @@
     margin: 20px;
 }
 
+.btnOrder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.btnOrder:hover{
+    background-color: white;
+}
 
 

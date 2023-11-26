@@ -34,12 +34,15 @@ function Bucket() {
         <div className={styles.leftPage}>
           <div className={styles.containerleftPage}>
             <h1>Ваше замовлення</h1>
-            {order.map(({ Name, Price, quantity, Image, Size }, index) => (
+            {order.map(({ Name, Price, quantity, Image, Size,hasCheeseCrust }, index) => (
               <div className={styles.bucketItem} key={index}>
                 <div className={styles.bucketItemStart}>
                   <img src={Image} alt="" />
+                  <div className={styles.infoItem}>
                   <h3>{Name}</h3>
                   <p>Розмір: {Size}</p>
+                  <p>{hasCheeseCrust === true ? "Cирний бортик" : ""}</p>
+                  </div>
                 </div>
                 <div className={styles.quantityBtn}>
                   <button onClick={() => { handleDecrement(index) }}>-</button>
