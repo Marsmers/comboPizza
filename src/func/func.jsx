@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { bucket } from "../Redux/Reducers";
 import styles from '../Components/menuContainer/Pizza/Pizza.module.css';
+import toast, { Toaster } from "react-hot-toast";
 
 const Func = () => {
     const [pizza, setPizza] = useState([]);
@@ -13,6 +14,8 @@ const Func = () => {
     const order = useSelector((state) => state.counter.order);
     const dispatch = useDispatch();
     const cheeseCrustPrice = ({ "35см": 45, "47см": 75 });
+
+
 
     useEffect(() => {
         axios
@@ -33,6 +36,8 @@ const Func = () => {
                 console.error("Помилка отримання даних:", error);
             });
     }, []);
+
+
 
     const handleSizeChange = (index, size) => {
         setPizzaSizes((prevSizes) => ({ ...prevSizes, [index]: size }));
@@ -68,7 +73,9 @@ const Func = () => {
                         Size,
                         quantity: 1,
                         hasCheeseCrust,
-                    }]))}};
+                    }]))
+        }
+    };
 
     const loadMorePizza = () => {
         if (currentPage < totalPages - 1) {
@@ -94,35 +101,40 @@ const Func = () => {
         }
     };
 
+    useEffect(() => {
+        const defaultSizes = pizza.map(() => "35см")
+        setPizzaSizes(defaultSizes);
+    }, [pizza])
+
+
+
     const pizzaPrice = (size, pizza) => {
         return size === "35см" ? pizza.price : pizza.productVariants[0].price;
     };
 
     return (
         <>
+            <div className={styles.toaster}><Toaster
+                position="top-right"
+                reverseOrder={true}
+            /></div>
             {pizza.map((pizza, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
                         <img className={styles["card-img"]} src={pizza.mainImageUrl} alt="" />
                     </div>
                     <div className={styles.cardText}>
-                        <h2 className={styles.pizzaName}>{pizza.name}</h2>
+                        <h1 className={styles.pizzaName}>{pizza.name}</h1>
                         <p className={styles.ingredients}> {pizza.ingredients.join(", ")}</p>
                     </div>
                     <div className={styles.footerCard}>
                         <div className={styles.sizeBtn}>
                             <button
                                 className={`${styles.btnSizeLeft} ${pizzaSizes[index] === "35см" ? styles.active : ""}`}
-                                onClick={() => handleSizeChange(index, "35см")}
-                            >
-                                35см
-                            </button>
+                                onClick={() => handleSizeChange(index, "35см")}>35см</button>
                             <button
                                 className={`${styles.btnSizeRigth} ${pizzaSizes[index] === "47см" ? styles.active : ""}`}
-                                onClick={() => handleSizeChange(index, "47см")}
-                            >
-                                47см
-                            </button>
+                                onClick={() => handleSizeChange(index, "47см")}>47см</button>
                         </div>
                         <button
                             className={`${styles.btnCheeseCrust} ${cheeseCrusts[index] ? styles.active : ""}`}
@@ -139,20 +151,19 @@ const Func = () => {
                             </h3>
                             <button
                                 className={styles.btnOrder}
-                                onClick={() =>
-                                    setOrder(
-                                        pizza.name,
-                                        pizza.id,
-                                        pizzaPrice(pizzaSizes[index], pizza),
-                                        pizza.mainImageUrl,
-                                        pizzaSizes[index],
-                                        cheeseCrusts[index],
-                                        index
-                                    )
-                                }
+                                onClick={() => setOrder(
+                                    pizza.name,
+                                    pizza.id,
+                                    pizzaPrice(pizzaSizes[index], pizza),
+                                    pizza.mainImageUrl,
+                                    pizzaSizes[index],
+                                    cheeseCrusts[index],
+                                    index,
+                                    toast.success('Додано в кошик')
+                                )}
                             >
-                                <img className={styles.basketImgBtn} src="korz.png" alt="" />
-                                Хочу
+                                <img className={styles.basketImgBtn} src="корзина.png" alt="" />
+                                Купити
                             </button>
                         </div>
                     </div>

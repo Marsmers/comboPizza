@@ -119,6 +119,8 @@
 .btnSizeLeft:hover{
     background-color: rgb(2, 171, 2);
     color: white;
+    transition: 0.3s;
+    
 }
 
 .btnSizeLeft:active{
@@ -136,6 +138,8 @@
 .btnSizeRigth:hover{
     background-color: rgb(2, 171, 2);
     color: white;
+    transition: 0.3s;
+
 }
 
 .btnSizeRigth:active{
@@ -150,6 +154,14 @@
     border: 1px solid white;
 }
 
+.btnCheeseCrust:hover{
+    background-color: rgb(2, 171, 2);
+    color: white;
+    transition: 0.3s;
+}
+.btnCheeseCrust:active{
+    scale: 95%;
+}
 
 .footerBottom button{
     width: 50%;
@@ -174,6 +186,19 @@
     height: 40px;
     border-radius: 10px;
     margin: 20px;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: large;
+}
+
+.BtnNextPage:hover{
+    background-color: gold;
+    color: black;
+}
+
+.BtnNextPage:active{
+    scale: 105%;
+    transition: 0.5s ;
 }
 
 .btnOrder{
@@ -181,10 +206,22 @@
     align-items: center;
     justify-content: center;
     border: none;
+    padding-right: 15px;
+    font-size: larger;
 }
 
+
 .btnOrder:hover{
-    background-color: white;
+    background-color: gainsboro;
 }
+
+.btnOrder:active{
+    margin-top: 5px;
+}
+
+.toaster{
+    font-family: 'Nunito', sans-serif;
+}
+
 
 

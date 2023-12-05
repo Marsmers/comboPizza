@@ -1,0 +1,113 @@
+.cons {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coco {
+    margin-top: 15vh;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.slider{
+    width: 90vw;
+    height: 40vh;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.boxMenuLink{
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxMenuLink div{
+    width: 20%;
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px black;
+}
+
+.boxMenuLink div:hover{
+    scale: 105%;
+    transition: 0.5s;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.736);
+}
+a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.pizza{
+    background-image: url(https://roll-club.kh.ua/wp-content/uploads/2021/06/pizza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+} 
+
+.headerMenu{
+    width: 100%;
+    height: 15%;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+    background-color: rgba(255, 217, 0, 0.817);
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+
+.burger{
+    background-image: url(https://hips.hearstapps.com/hmg-prod/images/turkey-burger-index-64873e8770b34.jpg?crop=0.502xw:1.00xh;0.243xw,0&resize=1200:*);
+}
+
+.kebab{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://farsh.in.ua/wp-content/uploads/2021/03/vehan-kebab-scaled.jpg);
+}
+
+.snack{
+    background-image: url(https://images.herzindagi.info/image/2022/Feb/easy-party-snacks-chicken_main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.salad{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkoLLHgO0gnhmJT8tAf22X_f8ywas0SkIkow&usqp=CAU);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sets{
+    background-image: url(https://rolafood.te.ua/wp-content/uploads/2023/10/teambuilding.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.drinks{
+    background-image: url(https://5.imimg.com/data5/SELLER/Default/2020/10/FP/GL/OA/521830/soft-drinks.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.other{
+    background-image: url(https://klopotenko.com/wp-content/uploads/2020/02/Vishnevyi-sous-do-myasa_siteWebUkr.jpg?v=1582568007);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}  

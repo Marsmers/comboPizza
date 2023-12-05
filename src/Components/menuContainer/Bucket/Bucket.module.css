@@ -12,9 +12,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: 'Nunito', sans-serif;
 }
 
-
+*:focus {
+    outline: none;
+}
 
 
 .leftPage {
@@ -26,10 +29,13 @@ flex-wrap: wrap;
 }
 
 .rightPage input {
+padding-left: 15px;
 width: 80%;
 height: 30px;
 margin: 10px;
 border-radius: 20px;
+border: none;
+box-shadow: 1px 1px 5px gray;
 }
 
 .rightPage {
@@ -40,12 +46,39 @@ width: 40%;
 height: 70vh;
 }
 
+.rightPageDelyvery{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+}
 
+.rightPageDelyvery textarea {
+    width: 80%;
+    height: 50px;
+    margin: 10px;
+    border: none;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px gray;
+    resize: none;
+}
 
 .btnBucket {
 width: 40%;
 height: 30px;
 border-radius: 10px;
+border: none;
+}
+
+.btnBucket:hover{
+    background-color: rgb(2, 171, 2);
+    color: white;
+    transition: 0.3s;
+}
+
+.btnBucket:active{
+    scale: 95%;
 }
 
 .bucketItem {
@@ -103,16 +136,27 @@ margin: 10px;
 }
 
 .leftBtnDelyv {
-width: 30%;
+width: 40%;
+height: 30px;
 border-radius: 10px 0px 0px 10px;
 margin: 1px;
+border: none;
+}
 
+.leftBtnDelyv:active{
+    scale: 95%;
 }
 
 .rightBtnDelyv {
-width: 30%;
+width: 40%;
+height: 30px;
 border-radius: 0px 10px 10px 0px;
 margin: 1px;
+border: none;
+}
+
+.rightBtnDelyv:active{
+    scale: 95%;
 }
 
 .containerleftPage {
@@ -159,4 +203,10 @@ width: 30px;
 height: 30px;
 border-radius: 40px;
 text-align: center;
+}
+
+.active{
+    background-color: rgb(2, 171, 2);
+    color: white;
+    transition: 0.3s;
 }
