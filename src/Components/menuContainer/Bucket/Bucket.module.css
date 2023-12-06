@@ -28,7 +28,7 @@ height: 100%;
 flex-wrap: wrap;
 }
 
-.rightPage input {
+.inputRight {
 padding-left: 15px;
 width: 80%;
 height: 30px;
@@ -38,6 +38,25 @@ border: none;
 box-shadow: 1px 1px 5px gray;
 }
 
+.timeDiv{
+    display: flex;
+    width: 80%;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.timeInput{
+    padding-left: 15px;
+    width: 20%;
+    text-align: center;
+    height: 30px;
+    margin: 10px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px 5px gray;
+}
 .rightPage {
 display: flex;
 flex-direction: column;
@@ -69,6 +88,7 @@ width: 40%;
 height: 30px;
 border-radius: 10px;
 border: none;
+cursor: pointer;
 }
 
 .btnBucket:hover{
@@ -180,29 +200,48 @@ border-radius: 10px 10px 0px 0px;
 }
 
 .quantityBtn {
-width: 30%;
-border-radius: 15px;
+    height: 30px;
+border-radius: 10px;
+border: 1px solid black;
 display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px;
+padding-left: 5px;
+padding-right: 5px;
 }
 
-.quantityBtn button {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 25px;
-height: 25px;
-border-radius: 100%;
+.quantityBtn button{
+    border: none;
+    vertical-align: baseline;
+    width: 25px;
+    height: 25px;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+
 }
 
+.quantityBtn button:hover{
+    border-radius: 50px;
+    background-color: rgba(128, 128, 128, 0.458);
+}
+.quantity{
+    margin-left: 5px;
+    margin-right: 5px;
+}
 .btnDelete {
+cursor: pointer;
+border: 1px solid gray;
 margin: 2%;
 width: 30px;
 height: 30px;
 border-radius: 40px;
 text-align: center;
+}
+
+.btnDelete:hover{
+    color: red;
 }
 
 .active{

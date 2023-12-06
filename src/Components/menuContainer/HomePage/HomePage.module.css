@@ -12,13 +12,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: 'Nunito', sans-serif;
 }
 
 .slider{
     width: 90vw;
     height: 40vh;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-top: 5vh;
+    /* margin-bottom: 5vh; */
 }
 
 .boxMenuLink{
@@ -27,11 +29,12 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 10vh;
 }
 
 .boxMenuLink div{
     width: 20%;
-    height: 20vh;
+    height: 25vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -111,3 +114,77 @@ a{
     background-repeat: no-repeat;
 
 }  
+.homePagePhotoBox{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+
+.homePagePhoto {
+    width: 25vw;
+    height: 400px;
+    margin: 10px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.homePagePhoto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.571);
+}
+
+.homePagePhoto :hover{
+    scale: 105%;
+    transition: 0.5s
+    ;
+}
+.textinfo{
+    text-align: center;
+    font-size: 25px;
+    border-radius: 15px;
+    margin-bottom: 5vh;
+    color: white;
+    width: 100%;
+    background-color: gold;
+    text-shadow: 2px 1px 3px rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.555);
+}
+
+.about {
+    padding-left: 0;
+}
+
+.aboutUs{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    color: black;
+    font-size: large;
+}
+
+.aboutUs h1{
+    -webkit-text-stroke: 2px black;
+}
+
+@media screen and (max-width: 1024px) {
+    .coco{
+        margin-top: 10vh;
+    }
+    .boxMenuLink{
+        height: 100vh;
+    }
+    .boxMenuLink div{
+        width: 40%;
+    }
+    .homePagePhoto{
+        width: 40%;
+    }
+}

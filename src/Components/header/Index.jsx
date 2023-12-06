@@ -1,21 +1,30 @@
 import { Link, Outlet } from 'react-router-dom';
-import './header.css'
+import styles from './Header.module.css'; // Підключення модуля CSS
 import Footer from '../footer/Footer';
 import { useSelector } from 'react-redux';
+import Example from './BurgerMenu/BurgerMenu';
+
+
+
 
 
 export default function Index() {
-  const order = useSelector(state => state.counter.order.length);
-
-
+ const order = useSelector(state => state.counter.order.length);
 
   return (
-    <div className='container'>
-      <div className='header'>
-        <div className='headerLogo'>
-          <Link to=""><img className='komboLogo' src='Logokombo.png' alt="Logo" /></Link>
+    <>
+    <Example className={styles.Example}/>
+    <div className={styles.burgerMenu}>
+    <Link to="">
+          <img className={styles.komboLogoBurger} src='Logokombo.png' alt="Logo" />
+        </Link>
+    </div>
+    <div className={styles.container}> 
+      <div className={styles.header}> 
+        <div className={styles.headerLogo}> 
+          <Link to=""><img className={styles.komboLogo} src='Logokombo.png' alt="Logo" /></Link>
         </div>
-        <ul>
+        <ul className={styles.ulHeader}>
           <li><Link to="Pizza"><p>Піцца</p></Link></li>
           <li><Link to="Burgers"><p>Бургери</p></Link></li>
           <li><p>Кебаби</p></li>
@@ -25,17 +34,18 @@ export default function Index() {
           <li><Link to="Drinks"><p>Напої</p></Link></li>
           <li><Link to="Appendices"><p>Інше</p></Link></li>  
         </ul>
-        <li className='bucketIcon'>
-            <Link to="Bucket">
-              <img src="bucket.png" alt="" />
-              <div className='bucektIndex'>
+        <li className={styles.bucketIcon}> 
+          <Link to="Bucket">
+            <img src="bucket.png" alt="" />
+            <div className={styles.bucektIndex}> 
               <p>{order}</p>
-              </div>
-            </Link>
-          </li>
+            </div>
+          </Link>
+        </li>
       </div>
       <Outlet />
       <Footer />
     </div>
+    </>
   );
 }

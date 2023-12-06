@@ -20,7 +20,7 @@ export default function SimpleSlider() {
     <div className={styles.sliderContainer}>
       <Slider {...settings}>
         <div className={styles.contentBox}>
-        <img src="https://tinypic.host/images/2023/12/04/BURGER-TEKASKII-BBQ_1278_Original.jpeg" alt="BURGER-TEKASKII-BBQ_1278_Original.jpeg" border="0"/>
+        <img src="https://tinypic.host/images/2023/12/05/photo_5438253935287719837_y.jpeg" alt="photo_5438253935287719837_y.jpeg" border="0"/>
         </div>
         <div className={styles.contentBox}>
           <img src="public/DSC_1172_Original.jpg" alt="" />

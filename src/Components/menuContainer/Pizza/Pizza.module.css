@@ -107,6 +107,7 @@
 
 
 .btnSizeLeft{
+    cursor: pointer;
     width: 50%;
     height: 100%;
     border-radius: 5px 0px 0px 5px;
@@ -128,6 +129,7 @@
 }
 
 .btnSizeRigth{
+    cursor: pointer;
     width: 50%;
     height: 100%;
     border-radius: 0px 5px 5px 0px;
@@ -152,6 +154,7 @@
     border-radius: 5px;
     font-size: medium;
     border: 1px solid white;
+    cursor: pointer;
 }
 
 .btnCheeseCrust:hover{
@@ -189,6 +192,7 @@
     border: none;
     font-family: 'Nunito', sans-serif;
     font-size: large;
+    cursor: pointer;
 }
 
 .BtnNextPage:hover{
@@ -202,6 +206,7 @@
 }
 
 .btnOrder{
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,3 +230,27 @@
 
 
 
+@media screen and (max-width: 1024px) {
+    .card{
+        width: 30%;
+    }
+
+    .coco{
+        margin-top: 10vh;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card{
+        width: 45%;
+        height: 45vh;
+    }
+    .coco{
+        margin-top: 10vh;
+        width: 100%;
+    }
+    .BtnNextPage{
+        width: 40%;
+    }
+}

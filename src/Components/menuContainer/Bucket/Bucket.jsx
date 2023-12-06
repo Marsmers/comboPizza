@@ -93,7 +93,7 @@ function Bucket() {
       <div className={styles.coco}>
         <div className={styles.leftPage}>
           <div className={styles.containerleftPage}>
-            <h1>Ваше замовлення</h1>
+            <h1>Ваше замовлення 🛒</h1>
             {order.map(({ Name, Price, quantity, Image, Size, hasCheeseCrust }, index) => (
               <div className={styles.bucketItem} key={index}>
                 <div className={styles.bucketItemStart}>
@@ -106,7 +106,7 @@ function Bucket() {
                 </div>
                 <div className={styles.quantityBtn}>
                   <button onClick={() => { handleDecrement(index) }}>-</button>
-                  <p>{quantity}</p>
+                  <p className={styles.quantity}>{quantity}</p>
                   <button onClick={() => { handleIncrement(index) }}>+</button>
                 </div>
                 <p>{Price} грн</p>
@@ -121,7 +121,7 @@ function Bucket() {
           </div>
         </div>
         <div className={styles.rightPage}>
-          <input
+          <input className={styles.inputRight}
             type="text"
             name="name"
             id=""
@@ -129,7 +129,7 @@ function Bucket() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <input
+          <input className={styles.inputRight}
             type="tel"
             name="phone"
             id=""
@@ -141,9 +141,7 @@ function Bucket() {
             <button
               className={`${styles.leftBtnDelyv} ${isPickupSelected ? styles.active : ''}`}
               onClick={handlePickup}
-            >
-              Самовивіз
-            </button>
+            >Самовивіз</button>
             <button
               className={`${styles.rightBtnDelyv} ${!isPickupSelected ? styles.active : ''}`}
               onClick={handleDelivery}
@@ -153,7 +151,7 @@ function Bucket() {
           </div>
           {!isPickupSelected && (
             <div className={styles.rightPageDelyvery}>
-              <input
+              <input className={styles.inputRight}
                 type="text"
                 name=""
                 id=""
@@ -161,7 +159,16 @@ function Bucket() {
                 value={deliveryAddress}
                 onChange={(e) => setDeliveryAddress(e.target.value)}
               />
-              <input
+              <textarea 
+                placeholder="Коментар..."
+                value={additionalNote}
+                onChange={(e) => setAdditionalNote(e.target.value)}
+              />
+              <div className={styles.timeDiv}>
+
+                <p className={styles.timeText}>Час доставки :</p>
+
+              <input className={styles.timeInput}
                 type="time"
                 name=""
                 id=""
@@ -169,11 +176,7 @@ function Bucket() {
                 value={deliveryTime}
                 onChange={(e) => setDeliveryTime(e.target.value)}
               />
-              <textarea
-                placeholder="Коментар..."
-                value={additionalNote}
-                onChange={(e) => setAdditionalNote(e.target.value)}
-              />
+              </div>
             </div>
           )}
           <button className={styles.btnBucket} onClick={sendOrderToTelegram}>

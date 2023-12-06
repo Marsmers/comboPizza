@@ -34,9 +34,10 @@
     cursor: pointer;
 }
 
-ul{
+.ulHeader{
     display: flex;
     align-items: center;
+    padding: 0;
 }
 
 li{list-style: none;}
@@ -45,8 +46,7 @@ a{text-decoration: none;}
 
 
 li p{
-    margin: 20px;
-    
+    margin: 1rem;
     list-style: none;
     color: white;
     cursor: pointer;
@@ -103,4 +103,74 @@ link{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.komboLogoBurger{
+    width: 0px;
+    height: 0px;
+}
+
+
+@media screen and (max-width: 1290px) {
+    li p{
+        margin: 0.5rem;
+    }
+    .komboLogo{
+        width: 0px;
+        height: 0px;
+    }
+    .komboLogoBurger{
+        flex: 1;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header{
+    opacity: 0;
+    z-index: -100;
+    width: 0px;
+    height: 0px;}
+
+    .ulHeader{
+    z-index: -100;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    }
+
+    .bucketIcon{
+        z-index: -100;
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+
+    .headerLogo{
+        z-index: -100;
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+
+    .container{
+        margin-top: 5vh;
+    }
+
+    .burgerMenu{
+        height: 100px;
+        background-color: black;    
+        width: 100%;
+
+        visibility: visible;
+        position: fixed;
+        z-index: 10;
+    }
+
+    .komboLogoBurger { 
+        position: fixed;
+        top: 20px;
+        left: 10px;}
 }
