@@ -10,9 +10,11 @@ export default function SimpleSlider() {
   var settings = {
     dots: true,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     slidesToShow: 3,
+    centerMode: true,
     autoplaySpeed: 2000,
+    arrows:false,
     responsive: [
       {
         breakpoint: 767,

@@ -16,7 +16,7 @@
 }
 
 .slider{
-    width: 90vw;
+    width: 100vw;
     height: 40vh;
     border-radius: 10px;
     margin-top: 5vh;
@@ -162,12 +162,14 @@ a{
     padding-left: 0;
 }
 
+
+
 .aboutUs{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom right;
     color: black;
-    font-size: large;
+    font-size: medium;
 }
 
 .aboutUs h1{
@@ -177,6 +179,7 @@ a{
 @media screen and (max-width: 1024px) {
     .coco{
         margin-top: 10vh;
+        width: 100vw;
     }
     .boxMenuLink{
         height: 100vh;
@@ -187,5 +190,8 @@ a{
     .homePagePhoto{
         width: 40%;
         height: 40%;
+    }
+    .homePagePhotoBox{
+        height: 100%;
     }
 }

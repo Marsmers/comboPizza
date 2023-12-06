@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div className={styles.cons}>
       <div className={styles.coco}>
-        <div className={styles.home}>
+        {/* <div className={styles.home}> */}
           <div className={styles.slider}>
             <Slider/>
           </div>
@@ -92,7 +92,7 @@ export default function HomePage() {
     </section>
     </div>
         </div>
-      </div>
+      {/* </div> */}
       <Outlet />
     </div>
   );
