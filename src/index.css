@@ -5,4 +5,5 @@ body{
   align-items: center;
   background-image: url(../public/vivid-blurred-colorful-wallpaper-background.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }

@@ -10,7 +10,7 @@ export default function SimpleSlider() {
   var settings = {
     dots: true,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     slidesToShow: 3,
     centerMode: true,
     autoplaySpeed: 2000,

@@ -119,15 +119,15 @@ link{
         width: 0px;
         height: 0px;
     }
+}
+
+@media screen and (max-width: 1024px) {
     .komboLogoBurger{
         flex: 1;
         width: 60px;
         height: 60px;
         cursor: pointer;
     }
-}
-
-@media screen and (max-width: 1024px) {
     .header{
     opacity: 0;
     z-index: -100;
