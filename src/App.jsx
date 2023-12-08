@@ -16,7 +16,7 @@ import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory();
 const router = createBrowserRouter(createRoutesFromElements(
-  <Route path="/" element={<Header />}>
+  <Route path="/" element={<Header/>}>
     <Route index element={<HomePage />} />
     <Route path="Pizza" element={<Pizza />} />
     <Route path="Burgers" element={<Burgers />} />
