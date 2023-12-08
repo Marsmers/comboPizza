@@ -117,15 +117,17 @@
 
 
 
-.btnSizeLeft:hover{
+/* .btnSizeLeft:hover{
     background-color: rgb(2, 171, 2);
     color: white;
     transition: 0.3s;
     
-}
+} */
 
 .btnSizeLeft:active{
     scale: 95%;
+    color: white;
+    transition: 0.3s linear;
 }
 
 .btnSizeRigth{
@@ -137,15 +139,12 @@
     border: 1px solid white;
 }
 
-.btnSizeRigth:hover{
-    background-color: rgb(2, 171, 2);
-    color: white;
-    transition: 0.3s;
 
-}
 
 .btnSizeRigth:active{
     scale: 95%;
+    color: white;
+    transition: 0.3s linear;
 }
 
 .btnCheeseCrust{
@@ -157,11 +156,11 @@
     cursor: pointer;
 }
 
-.btnCheeseCrust:hover{
+/* .btnCheeseCrust:hover{
     background-color: rgb(2, 171, 2);
     color: white;
     transition: 0.3s;
-}
+} */
 .btnCheeseCrust:active{
     scale: 95%;
 }
@@ -182,6 +181,7 @@
 .active{
     background-color: rgb(2, 171, 2);
     color: white;
+    transition: 0.3s linear;
 }
 
 .BtnNextPage{

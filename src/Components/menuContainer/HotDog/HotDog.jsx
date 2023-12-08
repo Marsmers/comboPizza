@@ -1,14 +1,13 @@
+import FuncHotDog from '../../../func/FuncHotDog'
+import styles from'../HotDog/HotDog.module.css'
 
-import FuncSalad from '../../../func/FuncHotDog'
-import styles from'../Burgers/Burgers.module.css'
 
-
-export default function Sets() {
+export default function HotDog() {
 
   return (
     <div className={styles.cons}>
       <div className={styles.coco}>
-        <FuncSalad/>
+        <FuncHotDog/>
       </div>
     </div>
   )

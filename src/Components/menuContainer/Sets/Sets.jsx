@@ -1,6 +1,6 @@
 
 import FuncSets from '../../../func/FuncSets'
-import styles from'../Burgers/Burgers.module.css'
+import styles from'../Sets/Sets.module.css'
 
 
 export default function Sets() {

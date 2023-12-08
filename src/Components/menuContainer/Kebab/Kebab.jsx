@@ -1,9 +1,9 @@
 
 import FuncKebab from '../../../func/FuncKebab';
-import styles from'../../menuContainer/Pizza/Pizza.module.css'
+import styles from'../../menuContainer/Kebab/Kebab.module.css'
 
 
-export default function Burgers() {
+export default function Kebab() {
 
   return (
     <div className={styles.cons}>

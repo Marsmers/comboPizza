@@ -33,7 +33,7 @@ padding-left: 15px;
 width: 80%;
 height: 30px;
 margin: 10px;
-border-radius: 20px;
+border-radius: 10px;
 border: none;
 box-shadow: 1px 1px 5px gray;
 }
@@ -53,7 +53,7 @@ box-shadow: 1px 1px 5px gray;
     text-align: center;
     height: 30px;
     margin: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     box-shadow: 1px 1px 5px gray;
 }

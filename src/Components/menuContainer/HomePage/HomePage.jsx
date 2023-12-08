@@ -41,7 +41,7 @@ export default function HomePage() {
               <Link to="Drinks"></Link>
             </div>
             <div className={styles.other}>
-              <p className={styles.headerMenu}>Додатки</p>
+              <p className={styles.headerMenu}>Інше</p>
               <Link to="Appendices"></Link>
             </div>
           </div>

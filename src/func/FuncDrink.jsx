@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { bucket } from "../Redux/Reducers";
-import styles from '../Components/menuContainer/Pizza/Pizza.module.css';
+import styles from '../Components/menuContainer/Drinks/Drinks.module.css';
 import toast, { Toaster } from "react-hot-toast";
 
 const FuncDrink = () => {
-const [pizza, setPizza] = useState([]);
+const [drink, setDrink] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
     const order = useSelector((state) => state.counter.order);
@@ -16,7 +16,7 @@ const [pizza, setPizza] = useState([]);
         axios
             .get("https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=0&productType=DRINK&size=8")
             .then((response) => {
-                setPizza(response.data.data);
+                setDrink(response.data.data);
                 setTotalPages(response.data.totalPages);
                 console.log(response)
             })
@@ -56,13 +56,13 @@ const [pizza, setPizza] = useState([]);
         }
     };
 
-    const loadMorePizza = () => {
+    const loadMoreDrink = () => {
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
                 .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
                 .then((response) => {
-                    setPizza((prevPizza) => [...prevPizza, ...response.data.data]);
+                    setDrink((prevDrink) => [...prevDrink, ...response.data.data]);
                     setCurrentPage(nextPage);
                     setTotalPages(response.data.totalPages);
                 })
@@ -72,35 +72,35 @@ const [pizza, setPizza] = useState([]);
         }
     };
 
-    console.log(pizza)
+    console.log(drink)
 
     return (
         <>
             <div className={styles.toaster}>
                 <Toaster position="top-center" reverseOrder={true} />
             </div>
-            {pizza.map((pizza, index) => (
+            {drink.map((drink, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={pizza.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={drink.mainImageUrl} alt="" />
                     </div>
                     <div className={styles.cardText}>
-                        <h2 className={styles.pizzaName}>{pizza.name}</h2>
-                        <p className={styles.ingredients}> {pizza.ingredients.join(", ")}</p>
+                        <h2 className={styles.drinkName}>{drink.name}</h2>
+                        <p className={styles.ingredients}> {drink.ingredients.join(", ")}</p>
                     </div>
                     <div className={styles.footerCard}>
                         <div className={styles.footerBottom}>
                             <h3 className={styles.cardFooterPrice}>
-                                Ціна: {pizza.price}
+                                Ціна: {drink.price}
                             </h3>
                             <button
                                 className={styles.btnOrder}
                                 onClick={() =>
                                     setOrder(
-                                        pizza.name,
-                                        pizza.id,
-                                        pizza.price,
-                                        pizza.mainImageUrl,
+                                        drink.name,
+                                        drink.id,
+                                        drink.price,
+                                        drink.mainImageUrl,
                                         false,
                                         index,
                                         toast.success('Додано в кошик')
@@ -115,7 +115,7 @@ const [pizza, setPizza] = useState([]);
                 </div>
             ))}
             {currentPage < totalPages - 1 && (
-                <button className={styles.BtnNextPage} onClick={loadMorePizza}>
+                <button className={styles.BtnNextPage} onClick={loadMoreDrink}>
                     Показати ще
                 </button>
             )}

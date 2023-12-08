@@ -1,6 +1,6 @@
 
 import FuncBurger from '../../../func/FuncBurger'
-import styles from'../../menuContainer/Pizza/Pizza.module.css'
+import styles from'../../menuContainer/Burgers/Burgers.module.css'
 
 
 export default function Burgers() {

@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { bucket } from "../Redux/Reducers";
-import styles from '../Components/menuContainer/Pizza/Pizza.module.css';
+import styles from '../Components/menuContainer/Kebab/Kebab.module.css';
 import toast, { Toaster } from "react-hot-toast";
 
 const FuncKebab = () => {
-    const [pizza, setPizza] = useState([]);
+    const [kebab, setKebab] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
-    const [pizzaSizes, setPizzaSizes] = useState({ Size: "L" });
+    const [kebabSizes, setKebabSizes] = useState({ Size: "L" });
     const order = useSelector((state) => state.counter.order);
     const dispatch = useDispatch();
 
@@ -19,7 +19,7 @@ const FuncKebab = () => {
         axios
             .get("https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=0&productType=KEBAB&size=8")
             .then((response) => {
-                setPizza(response.data.data);
+                setKebab(response.data.data);
                 setTotalPages(response.data.totalPages);
                 const defaultSizes = {};
                 const defaultCheeseCrusts = {};
@@ -28,7 +28,7 @@ const FuncKebab = () => {
                     defaultSizes[index] = "L";
                     defaultCheeseCrusts[index] = false;
                 });
-                setPizzaSizes(defaultSizes);
+                setKebabSizes(defaultSizes);
             })
             .catch((error) => {
                 console.error("Помилка отримання даних:", error);
@@ -38,12 +38,12 @@ const FuncKebab = () => {
         
         
         const handleSizeChange = (index, size) => {
-            setPizzaSizes((prevSizes) => ({ ...prevSizes, [index]: size }));
+            setKebabSizes((prevSizes) => ({ ...prevSizes, [index]: size }));
         };
         
 
         
-        console.log(pizza)
+        console.log(kebab)
     const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
         const existingItem = order.find(
             (item) => item.Id === Id && item.Size === Size && item.hasCheeseCrust === hasCheeseCrust
@@ -71,20 +71,20 @@ const FuncKebab = () => {
         }
     };
 
-    const loadMorePizza = () => {
+    const loadMoreKebab = () => {
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
                 .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
                 .then((response) => {
-                    setPizza((prevPizza) => [...prevPizza, ...response.data.data]);
+                    setKebab((prevKebab) => [...prevKebab, ...response.data.data]);
                     setCurrentPage(nextPage);
                     setTotalPages(response.data.totalPages);
-                    const defaultSize = { ...pizzaSizes };
-                    pizza.forEach((_, index) => {
+                    const defaultSize = { ...kebabSizes };
+                    kebab.forEach((_, index) => {
                         defaultSize[index] = "L";
                     });
-                    setPizzaSizes(defaultSize);
+                    setKebabSizes(defaultSize);
                 })
                 .catch((error) => {
                     console.error("Помилка отримання даних:", error);
@@ -93,14 +93,14 @@ const FuncKebab = () => {
     };
 
     useEffect(() => {
-        const defaultSizes = pizza.map(() => "L")
-        setPizzaSizes(defaultSizes);
-    }, [pizza])
+        const defaultSizes = kebab.map(() => "L")
+        setKebabSizes(defaultSizes);
+    }, [kebab])
 
 
 
-    const pizzaPrice = (size, pizza) => {
-        return size === "L" ? pizza.price : pizza.productVariants[0].price;
+    const kebabPrice = (size, kebab) => {
+        return size === "L" ? kebab.price : kebab.productVariants[0].price;
     };
 
     return (
@@ -109,39 +109,39 @@ const FuncKebab = () => {
                 position="top-center"
                 reverseOrder={true}
             /></div>
-            {pizza.map((pizza, index) => (
+            {kebab.map((kebab, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={pizza.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={kebab.mainImageUrl} alt="" />
                     </div>
                     <div className={styles.cardText}>
-                        <h2 className={styles.pizzaName}>{pizza.name}</h2>
-                        <p className={styles.ingredients}> {pizza.ingredients.join(", ")}</p>
+                        <h2 className={styles.kebabName}>{kebab.name}</h2>
+                        <p className={styles.ingredients}> {kebab.ingredients.join(", ")}</p>
                     </div>
                     <div className={styles.footerCard}>
                         <div className={styles.sizeBtn}>
                             <button
-                                className={`${styles.btnSizeLeft} ${pizzaSizes[index] === "L" ? styles.active : ""}`}
+                                className={`${styles.btnSizeLeft} ${kebabSizes[index] === "L" ? styles.active : ""}`}
                                 onClick={() => handleSizeChange(index, "L")}>L</button>
                             <button
-                                className={`${styles.btnSizeRigth} ${pizzaSizes[index] === "XL" ? styles.active : ""}`}
+                                className={`${styles.btnSizeRigth} ${kebabSizes[index] === "XL" ? styles.active : ""}`}
                                 onClick={() => handleSizeChange(index, "XL")}>XL</button>
                         </div>
                         <div className={styles.footerBottom}>
                             <h3 className={styles.cardFooterPrice}>
                                 Ціна:
-                                {pizzaSizes[index] === "XL"
-                                    ? pizzaPrice("XL", pizza)
-                                    : pizzaPrice("L", pizza)}
+                                {kebabSizes[index] === "XL"
+                                    ? kebabPrice("XL", kebab)
+                                    : kebabPrice("L", kebab)}
                             </h3>
                             <button
                                 className={styles.btnOrder}
                                 onClick={() => setOrder(
-                                    pizza.name,
-                                    pizza.id,
-                                    pizzaPrice(pizzaSizes[index], pizza),
-                                    pizza.mainImageUrl,
-                                    pizzaSizes[index],
+                                    kebab.name,
+                                    kebab.id,
+                                    kebabPrice(kebabSizes[index], kebab),
+                                    kebab.mainImageUrl,
+                                    kebabSizes[index],
                                     index,
                                     toast.success('Додано в кошик')
                                 )}
@@ -154,7 +154,7 @@ const FuncKebab = () => {
                 </div>
             ))}
             {currentPage < totalPages - 1 && (
-                <button className={styles.BtnNextPage} onClick={loadMorePizza}>
+                <button className={styles.BtnNextPage} onClick={loadMoreKebab}>
                     Показати ще
                 </button>
             )}

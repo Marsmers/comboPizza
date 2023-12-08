@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { bucket } from "../Redux/Reducers";
-import styles from '../Components/menuContainer/Pizza/Pizza.module.css';
+import styles from '../Components/menuContainer/Burgers/Burgers.module.css';
 import toast, { Toaster } from "react-hot-toast";
 
 const FuncBurger = () => {
-    const [pizza, setPizza] = useState([]);
+    const [burger, setBurger] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
     const order = useSelector((state) => state.counter.order);
@@ -16,7 +16,7 @@ const FuncBurger = () => {
         axios
             .get("https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=0&productType=BURGER&size=8")
             .then((response) => {
-                setPizza(response.data.data);
+                setBurger(response.data.data);
                 setTotalPages(response.data.totalPages);
                 console.log(response)
             })
@@ -56,13 +56,13 @@ const FuncBurger = () => {
         }
     };
 
-    const loadMorePizza = () => {
+    const loadMoreBurger = () => {
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
                 .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
                 .then((response) => {
-                    setPizza((prevPizza) => [...prevPizza, ...response.data.data]);
+                    setBurger((prevBurger) => [...prevBurger, ...response.data.data]);
                     setCurrentPage(nextPage);
                     setTotalPages(response.data.totalPages);
                 })
@@ -78,28 +78,28 @@ const FuncBurger = () => {
             <div className={styles.toaster}>
                 <Toaster position="top-center" reverseOrder={true} />
             </div>
-            {pizza.map((pizza, index) => (
+            {burger.map((burger, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={pizza.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={burger.mainImageUrl} alt="" />
                     </div>
                     <div className={styles.cardText}>
-                        <h1 className={styles.pizzaName}>{pizza.name}</h1>
-                        <p className={styles.ingredients}> {pizza.ingredients.join(", ")}</p>
+                        <h1 className={styles.burgerName}>{burger.name}</h1>
+                        <p className={styles.ingredients}> {burger.ingredients.join(", ")}</p>
                     </div>
                     <div className={styles.footerCard}>
                         <div className={styles.footerBottom}>
                             <h3 className={styles.cardFooterPrice}>
-                                Ціна: {pizza.price}
+                                Ціна: {burger.price}
                             </h3>
                             <button
                                 className={styles.btnOrder}
                                 onClick={() =>
                                     setOrder(
-                                        pizza.name,
-                                        pizza.id,
-                                        pizza.price,
-                                        pizza.mainImageUrl,
+                                        burger.name,
+                                        burger.id,
+                                        burger.price,
+                                        burger.mainImageUrl,
                                         false,
                                         index,
                                         toast.success('Додано в кошик')
@@ -114,7 +114,7 @@ const FuncBurger = () => {
                 </div>
             ))}
             {currentPage < totalPages - 1 && (
-                <button className={styles.BtnNextPage} onClick={loadMorePizza}>
+                <button className={styles.BtnNextPage} onClick={loadMoreBurger}>
                     Показати ще
                 </button>
             )}

@@ -1,6 +1,6 @@
 
 import FuncSnack from '../../../func/FuncSnack'
-import styles from'../Burgers/Burgers.module.css'
+import styles from'../Snack/Snack.module.css'
 
 
 export default function Snack() {

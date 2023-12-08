@@ -1,6 +1,6 @@
 
 import FuncDrink from '../../../func/FuncDrink'
-import styles from'../Burgers/Burgers.module.css'
+import styles from'../Drinks/Drinks.module.css'
 
 
 export default function Drinks() {
