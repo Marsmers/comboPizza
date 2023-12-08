@@ -13,7 +13,7 @@ export default class Responsive extends Component {
     var settings = {
       centerMode: true,
       dots: true,
-      // infinite: true,
+      infinite: true,
       arrows: false,
       autoplay: true,
       autoplaySpeed: 3000,
@@ -21,7 +21,6 @@ export default class Responsive extends Component {
       slidesToShow: 3,
       slidesToScroll: 3,
       initialSlide: 0,
-      variableWidth: true,
       responsive: [
         {
           breakpoint: 1024,
