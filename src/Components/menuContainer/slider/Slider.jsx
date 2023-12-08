@@ -11,18 +11,17 @@ import { Component } from "react";
 export default class Responsive extends Component {
   render() {
     var settings = {
-      className: "center",
       centerMode: true,
       dots: true,
-      infinite: true,
+      // infinite: true,
       arrows: false,
       autoplay: true,
       autoplaySpeed: 3000,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 4,
+      slidesToScroll: 3,
       initialSlide: 0,
-      variableWidth: true,
+      // variableWidth: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -42,8 +41,8 @@ export default class Responsive extends Component {
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             dots: true,
           }
         }
@@ -53,9 +52,9 @@ export default class Responsive extends Component {
   return (
     <div className={styles.sliderContainer}>
       <Slider {...settings}>
-        <div className={styles.contentBox}>
-        {/* <img src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.03.23.png" alt=""/> */}
-        </div>
+        {/* <div className={styles.contentBox}>
+        <img src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.03.23.png" alt=""/>
+        </div> */}
         <div className={styles.contentBox}>
           <img className={styles.imgSlider} src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.00.07.png" alt="" />
         </div>
