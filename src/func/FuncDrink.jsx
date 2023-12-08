@@ -60,7 +60,7 @@ const [drink, setDrink] = useState([]);
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
-                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
+                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=DRINK&size=8`)
                 .then((response) => {
                     setDrink((prevDrink) => [...prevDrink, ...response.data.data]);
                     setCurrentPage(nextPage);
