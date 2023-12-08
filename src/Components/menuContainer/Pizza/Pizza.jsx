@@ -3,7 +3,7 @@
 // import { useDispatch, useSelector } from "react-redux";
 // import { bucket } from "../../../Redux/Reducers";
 import styles from '../Pizza/Pizza.module.css';
-import Func from "../../../func/func";
+import Func from "../../../func/FuncPizza";
 
 export default function Pizza() {
   // const [pizza, setPizza] = useState([]);
@@ -109,43 +109,7 @@ export default function Pizza() {
   return (
     <div className={styles.cons}>
       <div className={styles.coco}>
-        {/* {pizza.map((pizza, index) => (
-          <div key={index} className={styles.card}>
-            <div className={styles["img-card"]}>
-              <img className={styles["card-img"]} src={pizza.mainImageUrl} alt="" />
-            </div>
-            <h1>{pizza.name}</h1>
-            <p>Інгредієнти: {pizza.ingredients.join(", ")}</p>
-            <div className={styles.footerCard}>
-              <div className={styles.sizeBtn}>
-                <button className={`${styles.btnSizeLeft}  ${pizzaSizes[index] === "30см" ? styles.active : ""}`}
-                  onClick={() => handleSizeChange(index, "30см")}>30см
-                </button>
-                <button className={`${styles.btnSizeRigth} ${pizzaSizes[index] === "40см" ? styles.active : ""}`}
-                  onClick={() => handleSizeChange(index, "40см")}>40см
-                </button>
-              </div>
-              <div className={styles.footerBottom}>
-                <h3>
-                  Ціна: 
-                  {pizzaSizes[index] === "40см" ? pizzaPrice("40см", pizza)  : pizzaPrice("30см", pizza) }
-                </h3>
-                <button onClick={() => setOrder(
-                  pizza.name,
-                  pizza.id,
-                  pizzaSizes[index] === "40см" ? pizzaPrice("40см", pizza) : pizzaPrice("30см", pizza),
-                  pizza.mainImageUrl,
-                  pizzaSizes,)}>
-                  <img className={styles.basketImgBtn} src="korz.png" alt="" />
-                </button>
-              </div>
-            </div>
-          </div>
-        ))} */}
         <Func/>
-        {/* {currentPage < totalPages - 1 && (
-          <button className={styles.BtnNextPage} onClick={loadMorePizza}>Показати ще</button>
-        )} */}
       </div>
     </div>
   );

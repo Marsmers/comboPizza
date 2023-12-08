@@ -92,7 +92,7 @@ a{
 }
 
 .salad{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkoLLHgO0gnhmJT8tAf22X_f8ywas0SkIkow&usqp=CAU);
+    background-image: url(https://potatorolls.com/wp-content/uploads/2020/10/Basic-Hot-Dogs-960x640.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -189,14 +189,14 @@ a{
         padding-left: 10px;
     }
     .homePagePhoto{
-        width: 45%;
-        height: 45%;
+        width: 44%;
+        height: 44%;
     }
     .homePagePhotoBox{
         height: 100%;
     }
     .boxMenuLink div{
-        width: 45%;
+        width: 44%;
         font-size: medium;
     }
 }

@@ -22,27 +22,33 @@ export default function HomePage() {
             </div>
             <div className={styles.kebab}>
               <p className={styles.headerMenu}>Кебаби</p>
+              <Link to="Kebab"></Link>
             </div>
             <div className={styles.snack}>
               <p className={styles.headerMenu}>Снеки</p>
+              <Link to="Snack"></Link>
             </div>
             <div className={styles.salad}>
-              <p className={styles.headerMenu}>Салати</p>
+              <p className={styles.headerMenu}>Хот-Доги</p>
+              <Link to="HotDog"></Link>
             </div>
             <div className={styles.sets}>
               <p className={styles.headerMenu}>Сети</p>
+              <Link to="Sets"></Link>
             </div>
             <div className={styles.drinks}>
               <p className={styles.headerMenu}>Напої</p>
+              <Link to="Drinks"></Link>
             </div>
             <div className={styles.other}>
               <p className={styles.headerMenu}>Додатки</p>
+              <Link to="Appendices"></Link>
             </div>
           </div>
             <h1 className={styles.textinfo}>Завітай у Kombo 🔥</h1>
           <div className={styles.homePagePhotoBox}>
             <div className={styles.homePagePhoto}>
-            <img src="https://tinypic.host/images/2023/12/05/photo_5438253935287719837_y.jpeg" alt="photo_5438253935287719837_y.jpeg" border="0"/>
+            <img src="https://tinypic.host/images/2023/12/08/IMG_2106.png" alt="photo_5438253935287719837_y.jpeg" border="0"/>
             </div>
             <div className={styles.homePagePhoto}>
             <img src="https://tinypic.host/images/2023/12/05/photo_5438253935287719857_y.jpeg" alt="photo_5438253935287719857_y.jpeg" border="0"/>

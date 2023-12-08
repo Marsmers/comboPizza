@@ -254,4 +254,32 @@
     .BtnNextPage{
         width: 40%;
     }
+    .img-card{
+        height: 50%;
+    }
+    .cardText{
+        height: 30%;
+    }
+    .pizzaName{
+        font-size: medium;
+    }
+    .ingredients{
+        font-size: smaller;
+    }
+    .btnSizeLeft{
+        font-size: small;
+    }
+    .btnSizeRigth{
+        font-size: small;
+    }
+    .btnCheeseCrust{
+        font-size: small;
+    }
+    .cardFooterPrice{
+        font-size: small;
+    }
+    .btnOrder{
+        font-size: small;
+        padding-right: 10px;
+    }
 }

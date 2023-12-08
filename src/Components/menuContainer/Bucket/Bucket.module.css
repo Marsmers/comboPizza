@@ -137,18 +137,25 @@ object-fit: cover;
     margin: 0;
 }
 
-.infoItem h3{
+.infoItem h4{
     margin: 0;
 }
 .bucketItemStart {
 width: 60%;
 display: flex;
 flex-direction: row;
-align-items: start;
+align-items: center;
 }
 
 .deliveryBtn {
 width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px;
+}
+.PayBtn{
+    width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -162,7 +169,16 @@ border-radius: 10px 0px 0px 10px;
 margin: 1px;
 border: none;
 }
-
+.leftBtnPay{
+width: 40%;
+height: 30px;
+border-radius: 10px 0px 0px 10px;
+margin: 1px;
+border: none;
+}
+.leftBtnPay:active{
+    scale: 95%;
+}
 .leftBtnDelyv:active{
     scale: 95%;
 }
@@ -174,11 +190,20 @@ border-radius: 0px 10px 10px 0px;
 margin: 1px;
 border: none;
 }
-
+.rightBtnPay{
+    width: 40%;
+height: 30px;
+border-radius: 0px 10px 10px 0px;
+margin: 1px;
+border: none;
+}
+.rightBtnPay:active{
+    scale: 95%;
+}
 .rightBtnDelyv:active{
     scale: 95%;
 }
-
+h4{margin: 0;}
 .containerleftPage {
 display: flex;
 justify-content: center;
@@ -248,4 +273,42 @@ text-align: center;
     background-color: rgb(2, 171, 2);
     color: white;
     transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+ .coco{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10vh;
+    }
+    .leftPage{
+        width: 95%;
+    }
+    .infoItem{
+        padding: 0;
+    }
+    .infoItem h4{
+        font-size: small;
+        margin: 0;
+    }
+    .infoItem p{
+        font-size: x-small;
+    }
+    .rightPage{
+        width: 90%;
+    }
+    .bucketItem{
+        height: 100px;
+        width: 99%;
+    }
+    .price{
+        font-size: small;
+    }
+    .timeInput{
+        width: 40%;
+    }
+    .bucketItemStart img{
+        margin-left: 5px;
+    }
 }

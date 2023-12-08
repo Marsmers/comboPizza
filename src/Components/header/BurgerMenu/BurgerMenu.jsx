@@ -17,13 +17,13 @@ const Example = () => {
         </Link>
       </li>
       <li><Link to="Pizza"><p>Піцца</p></Link></li>
-      <li><Link to="Burgers"><p>Бургери</p></Link></li>
-      <li><p>Кебаби</p></li>
-      <li><p>Снеки</p></li>
-      <li><p>Салати</p></li>
-      <li><p>Сети</p></li>
-      <li><Link to="Drinks"><p>Напої</p></Link></li>
-      <li><Link to="Appendices"><p>Інше</p></Link></li>
+          <li><Link to="Burgers"><p>Бургери</p></Link></li>
+          <li><Link to="Kebab"><p>Кебаби</p></Link></li>
+          <li><Link to="Snack"><p>Снеки</p></Link></li>
+          <li><Link to="HotDog"><p>Хот-дог</p></Link></li>
+          <li><Link to="Sets"><p>Комбо меню</p></Link></li>
+          <li><Link to="Drinks"><p>Напої</p></Link></li>
+          <li><Link to="Appendices"><p>Інше</p></Link></li>  
       <li className='bucketIcon'>
         <Link to="Bucket">
           <img src="bucket.png" alt="" />

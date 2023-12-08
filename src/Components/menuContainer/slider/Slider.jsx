@@ -19,7 +19,7 @@ export default function SimpleSlider() {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         }
       }
@@ -30,13 +30,13 @@ export default function SimpleSlider() {
     <div className={styles.sliderContainer}>
       <Slider {...settings}>
         <div className={styles.contentBox}>
-        <img src="https://tinypic.host/images/2023/12/05/photo_5438253935287719837_y.jpeg" alt="photo_5438253935287719837_y.jpeg" border="0"/>
+        <img src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.03.23.png" alt="photo_5438253935287719837_y.jpeg" border="0"/>
         </div>
         <div className={styles.contentBox}>
-          <img src="public/DSC_1172_Original.jpg" alt="" />
+          <img src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.00.07.png" alt="" />
         </div>
         <div className={styles.contentBox}>
-          <img src="public/DSC_1219_Original.jpg" alt="" />
+          <img src="https://tinypic.host/images/2023/12/07/photo_5442757534915089224_y.jpeg" alt="" />
         </div>
         <div className={styles.contentBox}>
           <img src="public/DSC_1318_Original.jpg" alt="" />

@@ -19,7 +19,7 @@ const Func = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/public/product?direction=ASC&field=name&page=0&productType=PIZZA&size=8")
+            .get("https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=0&productType=PIZZA&size=8")
             .then((response) => {
                 setPizza(response.data.data);
                 setTotalPages(response.data.totalPages);
@@ -35,21 +35,22 @@ const Func = () => {
             .catch((error) => {
                 console.error("Помилка отримання даних:", error);
             });
-    }, []);
-
-
-
-    const handleSizeChange = (index, size) => {
-        setPizzaSizes((prevSizes) => ({ ...prevSizes, [index]: size }));
-    };
-
-    const handleCheeseCrustChange = (index) => {
-        setCheeseCrusts((prevCheeseCrusts) => ({
-            ...prevCheeseCrusts,
-            [index]: !prevCheeseCrusts[index],
-        }));
-    };
-
+        }, []);
+        
+        
+        
+        const handleSizeChange = (index, size) => {
+            setPizzaSizes((prevSizes) => ({ ...prevSizes, [index]: size }));
+        };
+        
+        const handleCheeseCrustChange = (index) => {
+            setCheeseCrusts((prevCheeseCrusts) => ({
+                ...prevCheeseCrusts,
+                [index]: !prevCheeseCrusts[index],
+            }));
+        };
+        
+        console.log(pizza)
     const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
         const existingItem = order.find(
             (item) => item.Id === Id && item.Size === Size && item.hasCheeseCrust === hasCheeseCrust
@@ -81,7 +82,7 @@ const Func = () => {
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
-                .get(`http://localhost:8080/public/product?direction=ASC&field=name&page=${nextPage}&productType=PIZZA&size=8`)
+                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
                 .then((response) => {
                     setPizza((prevPizza) => [...prevPizza, ...response.data.data]);
                     setCurrentPage(nextPage);
@@ -115,7 +116,7 @@ const Func = () => {
     return (
         <>
             <div className={styles.toaster}><Toaster
-                position="top-right"
+                position="top-center"
                 reverseOrder={true}
             /></div>
             {pizza.map((pizza, index) => (
@@ -124,7 +125,7 @@ const Func = () => {
                         <img className={styles["card-img"]} src={pizza.mainImageUrl} alt="" />
                     </div>
                     <div className={styles.cardText}>
-                        <h1 className={styles.pizzaName}>{pizza.name}</h1>
+                        <h2 className={styles.pizzaName}>{pizza.name}</h2>
                         <p className={styles.ingredients}> {pizza.ingredients.join(", ")}</p>
                     </div>
                     <div className={styles.footerCard}>

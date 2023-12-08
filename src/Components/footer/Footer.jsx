@@ -7,7 +7,6 @@ export default function Footer() {
         <div className='contactsFooter'>
           <ul>
             <li><h3>Контакти</h3></li>
-            <li><a href="tel:+380-66-872-54-69<">+380 66 872 54 69</a></li>
             <li><a href="tel:+380-66-051-82-46<">+380 66 051 82 46</a></li>
           </ul>
         </div>

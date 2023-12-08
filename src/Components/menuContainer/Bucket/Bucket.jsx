@@ -8,6 +8,7 @@ function Bucket() {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [pay,setPay] = useState('Готівка');
   const [isPickupSelected, setIsPickupSelected] = useState(true);
   const [deliveryAddress, setDeliveryAddress] = useState('');
   const [deliveryTime, setDeliveryTime] = useState('');
@@ -43,6 +44,7 @@ function Bucket() {
     Ім'я: ${name}
     Номер телефону: ${phoneNumber}
     Загальна вартість: ${calculateTotalPrice()} грн
+    Спосіб оплати : ${pay}
 
     Товари:
     ${order.map(item => `
@@ -99,7 +101,7 @@ function Bucket() {
                 <div className={styles.bucketItemStart}>
                   <img src={Image} alt="" />
                   <div className={styles.infoItem}>
-                    <h3>{Name}</h3>
+                    <h4>{Name}</h4>
                     <p>Розмір: {Size}</p>
                     <p>{hasCheeseCrust === true ? 'Cирний бортик' : ''}</p>
                   </div>
@@ -109,7 +111,7 @@ function Bucket() {
                   <p className={styles.quantity}>{quantity}</p>
                   <button onClick={() => { handleIncrement(index) }}>+</button>
                 </div>
-                <p>{Price} грн</p>
+                <p className={styles.price}>{Price} грн</p>
                 <button className={styles.btnDelete} onClick={() => handleRemove(index)}>
                   x
                 </button>
@@ -137,6 +139,18 @@ function Bucket() {
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
+          <div className={styles.PayBtn}>
+            <button
+              className={`${styles.leftBtnPay} ${pay === "Готівка" ? styles.active : ''}`}
+              onClick={() =>setPay("Готівка")}
+            >Готівка</button>
+            <button
+              className={`${styles.rightBtnPay} ${pay === "Банківська карта" ? styles.active : ''}`}
+              onClick={() =>setPay("Банківська карта")}
+            >
+              Банківська карта
+            </button>
+          </div>
           <div className={styles.deliveryBtn}>
             <button
               className={`${styles.leftBtnDelyv} ${isPickupSelected ? styles.active : ''}`}
