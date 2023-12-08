@@ -54,7 +54,7 @@ export default class Responsive extends Component {
     <div className={styles.sliderContainer}>
       <Slider {...settings}>
         <div className={styles.contentBox}>
-        <img src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.03.23.png" alt="photo_5438253935287719837_y.jpeg" border="0"/>
+        <img src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.03.23.png" alt=""/>
         </div>
         <div className={styles.contentBox}>
           <img src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.00.07.png" alt="" />

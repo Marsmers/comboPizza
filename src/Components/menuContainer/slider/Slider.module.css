@@ -10,7 +10,7 @@
 
 .sliderContainer{
     width: 100%;
-    height: 50vh;
+    height: 30vh;
 }
 .contentBox img{
     width: 100%;
@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 1024px) {
     .contentBox{
-        height: 30vh;
+        height: 10vh;
     }
-    .sliderContainer{height: 30vh;}
+    .sliderContainer{height: 10vh;}
 }
