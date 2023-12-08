@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { decrementQuantity, incrementQuantity, deleteOrder } from '../../../Redux/Reducers';
 import styles from '../Bucket/Bucket.module.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 function Bucket() {
   const order = useSelector((state) => state.counter.order);
@@ -91,6 +92,10 @@ function Bucket() {
   };
 
   return (
+    <>
+ <div className={styles.toaster}>
+                <Toaster position="top-center" reverseOrder={true} />
+            </div>
     <div className={styles.cons}>
       <div className={styles.coco}>
         <div className={styles.leftPage}>
@@ -193,12 +198,14 @@ function Bucket() {
               </div>
             </div>
           )}
-          <button className={styles.btnBucket} onClick={sendOrderToTelegram}>
+<button className={styles.btnBucket} onClick={() => { sendOrderToTelegram(); toast.success('Дякуюємо за замовлення'); }}>
+
             Замовити
           </button>
         </div>
       </div>
     </div>
+  </>
   );
 }
 
