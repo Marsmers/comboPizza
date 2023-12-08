@@ -7,7 +7,6 @@ export default function HomePage() {
   return (
     <div className={styles.cons}>
       <div className={styles.coco}>
-        {/* <div className={styles.home}> */}
           <div className={styles.slider}>
             <Slider/>
           </div>
@@ -57,11 +56,11 @@ export default function HomePage() {
             <img src="https://tinypic.host/images/2023/12/05/photo_5438253935287719845_y.jpeg" alt="photo_5438253935287719845_y.jpeg" border="0"/>
             </div>
             <div className={styles.homePagePhoto}>
-            <img src="https://tinypic.host/images/2023/12/05/photo_5438253935287719848_y.jpeg" alt="photo_5438253935287719848_y.jpeg" border="0"/>            </div>
+            <img src="https://tinypic.host/images/2023/12/05/photo_5438253935287719848_y.jpeg" alt="photo_5438253935287719848_y.jpeg" border="0"/></div>
             <div className={styles.homePagePhoto}>
-            <img src="https://tinypic.host/images/2023/12/05/photo_5438253935287719850_y.jpeg" alt="photo_5438253935287719850_y.jpeg" border="0"/>            </div>
+            <img src="https://tinypic.host/images/2023/12/05/photo_5438253935287719850_y.jpeg" alt="photo_5438253935287719850_y.jpeg" border="0"/></div>
             <div className={styles.homePagePhoto}>
-                <img src="https://tinypic.host/images/2023/12/05/DSC_0924_Original.jpeg" alt="DSC_0924_Original.jpeg" border="0"/>
+              <img src="https://tinypic.host/images/2023/12/05/DSC_0924_Original.jpeg" alt="DSC_0924_Original.jpeg" border="0"/>
             </div>
           </div>
           <h1 className={styles.textinfo}>Про нас 🧡</h1>

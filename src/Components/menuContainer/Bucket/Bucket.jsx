@@ -198,8 +198,7 @@ function Bucket() {
               </div>
             </div>
           )}
-<button className={styles.btnBucket} onClick={() => { sendOrderToTelegram(); toast.success('Дякуюємо за замовлення'); }}>
-
+            <button className={styles.btnBucket} onClick={() => { sendOrderToTelegram(); toast.success('Дякуємо за замовлення'); }}>
             Замовити
           </button>
         </div>

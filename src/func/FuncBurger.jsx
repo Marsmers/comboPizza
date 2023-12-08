@@ -18,14 +18,13 @@ const FuncBurger = () => {
             .then((response) => {
                 setBurger(response.data.data);
                 setTotalPages(response.data.totalPages);
-                console.log(response)
             })
             .catch((error) => {
                 console.error("Помилка отримання даних:", error);
             });
     }, []);
 
-    const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
+    const setOrder = (Name, Id, Price, Image, Size) => {
         const existingItem = order.find(
             (item) => item.Id === Id 
         );
@@ -49,7 +48,6 @@ const FuncBurger = () => {
                         Image,
                         Size,
                         quantity: 1,
-                        hasCheeseCrust,
                     },
                 ])
             );
