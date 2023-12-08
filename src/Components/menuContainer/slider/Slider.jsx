@@ -21,7 +21,7 @@ export default class Responsive extends Component {
       slidesToShow: 3,
       slidesToScroll: 3,
       initialSlide: 0,
-      // variableWidth: true,
+      variableWidth: true,
       responsive: [
         {
           breakpoint: 1024,
