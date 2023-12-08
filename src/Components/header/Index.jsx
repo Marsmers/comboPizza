@@ -25,14 +25,14 @@ export default function Index() {
           <Link to=""><img className={styles.komboLogo} src='Logokombo.png' alt="Logo" /></Link>
         </div>
         <ul className={styles.ulHeader}>
-          <li><Link to="#Pizza"><p>Піцца</p></Link></li>
-          <li><Link to="#Burgers"><p>Бургери</p></Link></li>
-          <li><Link to="#Kebab"><p>Кебаби</p></Link></li>
-          <li><Link to="#Snack"><p>Снеки</p></Link></li>
-          <li><Link to="#HotDog"><p>Хот-дог</p></Link></li>
-          <li><Link to="#Sets"><p>Комбо меню</p></Link></li>
-          <li><Link to="#Drinks"><p>Напої</p></Link></li>
-          <li><Link to="#Appendices"><p>Інше</p></Link></li>  
+          <li><Link to="Pizza"><p>Піцца</p></Link></li>
+          <li><Link to="Burgers"><p>Бургери</p></Link></li>
+          <li><Link to="Kebab"><p>Кебаби</p></Link></li>
+          <li><Link to="Snack"><p>Снеки</p></Link></li>
+          <li><Link to="HotDog"><p>Хот-дог</p></Link></li>
+          <li><Link to="Sets"><p>Комбо меню</p></Link></li>
+          <li><Link to="Drinks"><p>Напої</p></Link></li>
+          <li><Link to="Appendices"><p>Інше</p></Link></li>  
         </ul>
         <li className={styles.bucketIcon}> 
           <Link to="Bucket">
