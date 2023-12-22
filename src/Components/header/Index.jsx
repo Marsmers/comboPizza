@@ -15,9 +15,19 @@ export default function Index() {
     <>
     <Example className={styles.Example}/>
     <div className={styles.burgerMenu}>
+    <div className={styles.komboLogoBurger}>
     <Link to="">
           <img className={styles.komboLogoBurger} src='Logokombo.png' alt="Logo" />
-        </Link>
+    </Link>
+    </div>
+    <div className={styles.bucketLogo}>
+    <Link to="Корзина">
+            <img src="bucket.png" alt="" />
+            <div className={styles.bucektIndexMob}> 
+              <p>{order}</p>
+            </div>
+          </Link>
+    </div>
     </div>
     <div className={styles.container}> 
       <div className={styles.header}> 
@@ -25,17 +35,17 @@ export default function Index() {
           <Link to=""><img className={styles.komboLogo} src='Logokombo.png' alt="Logo" /></Link>
         </div>
         <ul className={styles.ulHeader}>
-          <li><Link to="Pizza"><p>Піцца</p></Link></li>
-          <li><Link to="Burgers"><p>Бургери</p></Link></li>
-          <li><Link to="Kebab"><p>Кебаби</p></Link></li>
-          <li><Link to="Snack"><p>Снеки</p></Link></li>
-          <li><Link to="HotDog"><p>Хот-дог</p></Link></li>
-          <li><Link to="Sets"><p>Комбо меню</p></Link></li>
-          <li><Link to="Drinks"><p>Напої</p></Link></li>
-          <li><Link to="Appendices"><p>Інше</p></Link></li>  
+          <li><Link to="Піца"><p>Піца</p></Link></li>
+          <li><Link to="Бургери"><p>Бургери</p></Link></li>
+          <li><Link to="Кебаби"><p>Кебаби</p></Link></li>
+          <li><Link to="Снеки"><p>Снеки</p></Link></li>
+          <li><Link to="Хот-доги"><p>Хот-дог</p></Link></li>
+          <li><Link to="Комбо-меню"><p>Комбо меню</p></Link></li>
+          <li><Link to="Напої"><p>Напої</p></Link></li>
+          <li><Link to="Інше"><p>Інше</p></Link></li>  
         </ul>
         <li className={styles.bucketIcon}> 
-          <Link to="Bucket">
+          <Link to="Корзина">
             <img src="bucket.png" alt="" />
             <div className={styles.bucektIndex}> 
               <p>{order}</p>

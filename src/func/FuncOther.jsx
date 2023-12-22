@@ -25,7 +25,7 @@ const [other, setOther] = useState([]);
             });
     }, []);
 
-    const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
+    const setOrder = (Name, Id, Price, Image) => {
         const existingItem = order.find(
             (item) => item.Id === Id 
         );
@@ -47,9 +47,7 @@ const [other, setOther] = useState([]);
                         Id,
                         Price,
                         Image,
-                        Size,
                         quantity: 1,
-                        hasCheeseCrust,
                     },
                 ])
             );
@@ -60,7 +58,7 @@ const [other, setOther] = useState([]);
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
-                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
+                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=OTHER&size=8`)
                 .then((response) => {
                     setOther((prevOther) => [...prevOther, ...response.data.data]);
                     setCurrentPage(nextPage);
@@ -82,7 +80,7 @@ const [other, setOther] = useState([]);
             {other.map((other, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={other.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={other.mainImageUrl} alt="Комбо інше Стрий" />
                     </div>
                     <div className={styles.cardText}>
                         <h2 className={styles.otherName}>{other.name}</h2>
@@ -101,9 +99,7 @@ const [other, setOther] = useState([]);
                                         other.id,
                                         other.price,
                                         other.mainImageUrl,
-                                        false,
-                                        index,
-                                        toast.success('Додано в кошик')
+                                        toast.success(`${other.name} \nДодано в кошик`)
                                     )
                                 }
                             >

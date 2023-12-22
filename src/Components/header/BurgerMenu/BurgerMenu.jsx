@@ -5,10 +5,8 @@ import { useSelector } from 'react-redux'; // Імпортуємо хук useSel
 import '../../header/BurgerMenu/BurgerMenu.css';
 
 const Example = () => {
-  // Припускаючи, що 'order' - це правильна властивість у вашому Redux-сховищі
   const order = useSelector(state => state.counter.order.length);
 
-  // Зауваження: Також потрібно надати стилі, див. https://github.com/negomi/react-burger-menu#styling
   return (
     <Menu>
       <li>
@@ -16,16 +14,16 @@ const Example = () => {
           <img className='komboLogo' src='Logokombo.png' alt="Logo" />
         </Link>
       </li>
-      <li><Link to="Pizza"><p>Піцца</p></Link></li>
-          <li><Link to="Burgers"><p>Бургери</p></Link></li>
-          <li><Link to="Kebab"><p>Кебаби</p></Link></li>
-          <li><Link to="Snack"><p>Снеки</p></Link></li>
-          <li><Link to="HotDog"><p>Хот-дог</p></Link></li>
-          <li><Link to="Sets"><p>Комбо меню</p></Link></li>
-          <li><Link to="Drinks"><p>Напої</p></Link></li>
-          <li><Link to="Appendices"><p>Інше</p></Link></li>  
+      <li><Link to="Піца"><p>Піца</p></Link></li>
+          <li><Link to="Бургери"><p>Бургери</p></Link></li>
+          <li><Link to="Кебаби"><p>Кебаби</p></Link></li>
+          <li><Link to="Снеки"><p>Снеки</p></Link></li>
+          <li><Link to="Хот-доги"><p>Хот-дог</p></Link></li>
+          <li><Link to="Комбо-меню"><p>Комбо меню</p></Link></li>
+          <li><Link to="Напої"><p>Напої</p></Link></li>
+          <li><Link to="Інше"><p>Інше</p></Link></li>  
       <li className='bucketIcon'>
-        <Link to="Bucket">
+        <Link to="Корзина">
           <img src="bucket.png" alt="" />
           <div className='bucektIndex'>
             <p>{order}</p>

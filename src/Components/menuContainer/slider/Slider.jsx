@@ -54,13 +54,13 @@ export default class Responsive extends Component {
         <img src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.03.23.png" alt=""/>
         </div> */}
         <div className={styles.contentBox}>
-          <img className={styles.imgSlider} src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.00.07.png" alt="" />
+          <img className={styles.imgSlider} src="https://tinypic.host/images/2023/12/13/ZNMOK-EKRANA-2023-12-08-O-00.00.07-1.png" alt="" />
         </div>
         <div className={styles.contentBox}>
-          <img className={styles.imgSlider}src="https://tinypic.host/images/2023/12/08/photo_5442757534915089224_y.jpeg" alt="" />
+          <img className={styles.imgSlider}src="https://tinypic.host/images/2023/12/13/photo_5442757534915089224_y-1.jpeg" alt="" />
         </div>
         <div className={styles.contentBox}>
-          <img className={styles.imgSlider}src="https://tinypic.host/images/2023/12/08/SZOSDafa1d850c07dfa21.png" alt="" />
+          <img className={styles.imgSlider}src="https://tinypic.host/images/2023/12/13/SZOSDafa1d850c07dfa21-1.png" alt="" />
         </div>
       </Slider>
     </div>

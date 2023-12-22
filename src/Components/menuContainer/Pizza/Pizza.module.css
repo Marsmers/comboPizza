@@ -22,9 +22,8 @@
     flex-direction: column;
     margin: 1%;
     width: 20%;
-    height: 50vh;
     border-radius: 15px;
-    box-shadow: 3px 3px 10px gray;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.494);
     font-size: 13px;
     overflow: hidden;
 }
@@ -33,7 +32,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
-    height: 20%;
+    height: 25%;
 }
 
 .pizzaName{
@@ -47,7 +46,7 @@
 }
 .card:hover {
     scale: 105%;
-    box-shadow: 5px 5px 25px gray;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.494);
     transition: 500ms ease;
 }
 
@@ -69,8 +68,6 @@
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
 }
-
-
 
 
 .footerCard {
@@ -117,13 +114,6 @@
 
 
 
-/* .btnSizeLeft:hover{
-    background-color: rgb(2, 171, 2);
-    color: white;
-    transition: 0.3s;
-    
-} */
-
 .btnSizeLeft:active{
     scale: 95%;
     color: white;
@@ -156,11 +146,7 @@
     cursor: pointer;
 }
 
-/* .btnCheeseCrust:hover{
-    background-color: rgb(2, 171, 2);
-    color: white;
-    transition: 0.3s;
-} */
+
 .btnCheeseCrust:active{
     scale: 95%;
 }
@@ -226,6 +212,7 @@
 
 .toaster{
     font-family: 'Nunito', sans-serif;
+    text-align: center;
 }
 
 
@@ -248,7 +235,7 @@
         height: 45vh;
     }
     .coco{
-        margin-top: 10vh;
+        margin-top: 0vh;
         width: 100%;
     }
     .BtnNextPage{

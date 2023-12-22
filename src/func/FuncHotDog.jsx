@@ -5,6 +5,7 @@ import { bucket } from "../Redux/Reducers";
 import styles from '../Components/menuContainer/HotDog/HotDog.module.css';
 import toast, { Toaster } from "react-hot-toast";
 
+
 const FuncHotDog = () => {
 const [hotdog, setHotDog] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
@@ -25,7 +26,7 @@ const [hotdog, setHotDog] = useState([]);
             });
     }, []);
 
-    const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
+    const setOrder = (Name, Id, Price, Image) => {
         const existingItem = order.find(
             (item) => item.Id === Id 
         );
@@ -47,9 +48,7 @@ const [hotdog, setHotDog] = useState([]);
                         Id,
                         Price,
                         Image,
-                        Size,
                         quantity: 1,
-                        hasCheeseCrust,
                     },
                 ])
             );
@@ -60,7 +59,7 @@ const [hotdog, setHotDog] = useState([]);
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
-                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
+                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=HOT_DOG&size=8`)
                 .then((response) => {
                     setHotDog((prevHotDog) => [...prevHotDog, ...response.data.data]);
                     setCurrentPage(nextPage);
@@ -72,7 +71,6 @@ const [hotdog, setHotDog] = useState([]);
         }
     };
 
-    console.log(hotdog)
 
     return (
         <>
@@ -82,7 +80,7 @@ const [hotdog, setHotDog] = useState([]);
             {hotdog.map((hotdog, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={hotdog.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={hotdog.mainImageUrl} alt="Комбо хот-дог Стрий" />
                     </div>
                     <div className={styles.cardText}>
                         <h2 className={styles.hotdogName}>{hotdog.name}</h2>
@@ -101,9 +99,7 @@ const [hotdog, setHotDog] = useState([]);
                                         hotdog.id,
                                         hotdog.price,
                                         hotdog.mainImageUrl,
-                                        false,
-                                        index,
-                                        toast.success('Додано в кошик')
+                                        toast.success(`${hotdog.name} \nДодано в кошик`)
                                     )
                                 }
                             >

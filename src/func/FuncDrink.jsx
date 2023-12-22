@@ -25,7 +25,7 @@ const [drink, setDrink] = useState([]);
             });
     }, []);
 
-    const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
+    const setOrder = (Name, Id, Price, Image) => {
         const existingItem = order.find(
             (item) => item.Id === Id 
         );
@@ -47,9 +47,7 @@ const [drink, setDrink] = useState([]);
                         Id,
                         Price,
                         Image,
-                        Size,
                         quantity: 1,
-                        hasCheeseCrust,
                     },
                 ])
             );
@@ -82,7 +80,7 @@ const [drink, setDrink] = useState([]);
             {drink.map((drink, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={drink.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={drink.mainImageUrl} alt="Комбо напої Стрий" />
                     </div>
                     <div className={styles.cardText}>
                         <h2 className={styles.drinkName}>{drink.name}</h2>
@@ -101,9 +99,7 @@ const [drink, setDrink] = useState([]);
                                         drink.id,
                                         drink.price,
                                         drink.mainImageUrl,
-                                        false,
-                                        index,
-                                        toast.success('Додано в кошик')
+                                        toast.success(`${drink.name} \nДодано в кошик`)
                                     )
                                 }
                             >

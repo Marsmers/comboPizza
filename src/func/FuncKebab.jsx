@@ -40,12 +40,11 @@ const FuncKebab = () => {
   };
 
   console.log(kebab);
-  const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
+  const setOrder = (Name, Id, Price, Image, Size) => {
     const existingItem = order.find(
       (item) =>
         item.Id === Id &&
-        item.Size === Size &&
-        item.hasCheeseCrust === hasCheeseCrust
+        item.Size === Size 
     );
 
     if (existingItem) {
@@ -53,8 +52,7 @@ const FuncKebab = () => {
         bucket(
           order.map((item) =>
             item.Id === Id &&
-            item.Size === Size &&
-            item.hasCheeseCrust === hasCheeseCrust
+            item.Size === Size 
               ? { ...item, quantity: item.quantity + 1 }
               : item
           )
@@ -82,7 +80,7 @@ const FuncKebab = () => {
       const nextPage = currentPage + 1;
       axios
         .get(
-          `https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`
+          `https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=KEBAB&size=8`
         )
         .then((response) => {
           setKebab((prevKebab) => [...prevKebab, ...response.data.data]);
@@ -120,7 +118,7 @@ const FuncKebab = () => {
             <img
               className={styles["card-img"]}
               src={kebab.mainImageUrl}
-              alt=""
+              alt="Комбо кебаб Стрий"
             />
           </div>
           <div className={styles.cardText}>
@@ -166,7 +164,7 @@ const FuncKebab = () => {
                     kebab.mainImageUrl,
                     kebabSizes[index],
                     index,
-                    toast.success("Додано в кошик")
+                    toast.success(`${kebab.name} \nДодано в кошик`)
                   )
                 }
               >

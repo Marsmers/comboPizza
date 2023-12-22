@@ -50,10 +50,12 @@
 }
 a{
     width: 100%;
+    height: 100%;
     display: block;
+
 }
 .pizza{
-    background-image: url(https://roll-club.kh.ua/wp-content/uploads/2021/06/pizza.jpg);
+    background-image: url(https://tinypic.host/images/2023/12/07/photo_5445002351111950861_y.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -75,17 +77,17 @@ a{
 }
 
 .burger{
-    background-image: url(https://hips.hearstapps.com/hmg-prod/images/turkey-burger-index-64873e8770b34.jpg?crop=0.502xw:1.00xh;0.243xw,0&resize=1200:*);
+    background-image: url(https://tinypic.host/images/2023/12/07/KEBAB-BURGER.jpeg);
 }
 
 .kebab{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(https://farsh.in.ua/wp-content/uploads/2021/03/vehan-kebab-scaled.jpg);
+    background-image: url(https://tinypic.host/images/2023/12/07/GRIBNII.jpeg);
 }
 
 .snack{
-    background-image: url(https://images.herzindagi.info/image/2022/Feb/easy-party-snacks-chicken_main.jpg);
+    background-image: url(https://tinypic.host/images/2023/12/07/NAGETSI.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -97,7 +99,7 @@ a{
 }
 
 .sets{
-    background-image: url(https://rolafood.te.ua/wp-content/uploads/2023/10/teambuilding.png);
+    background-image: url(https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.00.07.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -109,7 +111,7 @@ a{
 }
 
 .other{
-    background-image: url(https://klopotenko.com/wp-content/uploads/2020/02/Vishnevyi-sous-do-myasa_siteWebUkr.jpg?v=1582568007);
+    background-image: url(https://tinypic.host/images/2023/12/09/ketchup.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -186,6 +188,9 @@ a{
     }
     .aboutUs{
         padding-left: 10px;
+    }
+    .coco{
+        margin-top: 0vh;
     }
     .homePagePhoto{
         width: 44%;

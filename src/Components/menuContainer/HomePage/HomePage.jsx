@@ -12,36 +12,32 @@ export default function HomePage() {
           </div>
           <div className={styles.boxMenuLink}>
             <div className={styles.pizza}>
-              <p className={styles.headerMenu}>Піцца</p>
-              <Link to="Pizza"></Link>
+              <Link to="Піца"><p className={styles.headerMenu}>Піца</p></Link>
             </div>
             <div className={styles.burger}>
-              <p className={styles.headerMenu}>Бургери</p>
-              <Link to="Burgers"></Link>
+              <Link to="Бургери"><p className={styles.headerMenu}>Бургери</p></Link>
             </div>
             <div className={styles.kebab}>
-              <p className={styles.headerMenu}>Кебаби</p>
-              <Link to="Kebab"></Link>
+              <Link to="Кебаби"><p className={styles.headerMenu}>Кебаби</p></Link>
             </div>
             <div className={styles.snack}>
-              <p className={styles.headerMenu}>Снеки</p>
-              <Link to="Snack"></Link>
+              <Link to="Снеки"><p className={styles.headerMenu}>Снеки</p></Link>
             </div>
             <div className={styles.salad}>
-              <p className={styles.headerMenu}>Хот-Доги</p>
-              <Link to="HotDog"></Link>
+              
+              <Link to="Хот-доги"><p className={styles.headerMenu}>Хот-Доги</p></Link>
             </div>
             <div className={styles.sets}>
-              <p className={styles.headerMenu}>Сети</p>
-              <Link to="Sets"></Link>
+             
+              <Link to="Комбо-меню"> <p className={styles.headerMenu}>Сети</p></Link>
             </div>
             <div className={styles.drinks}>
-              <p className={styles.headerMenu}>Напої</p>
-              <Link to="Drinks"></Link>
+             
+              <Link to="Напої"> <p className={styles.headerMenu}>Напої</p></Link>
             </div>
             <div className={styles.other}>
-              <p className={styles.headerMenu}>Інше</p>
-              <Link to="Appendices"></Link>
+             
+              <Link to="Інше"><p className={styles.headerMenu}>Інше</p></Link>
             </div>
           </div>
             <h1 className={styles.textinfo}>Завітай у Kombo 🔥</h1>

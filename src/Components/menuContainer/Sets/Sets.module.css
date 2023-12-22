@@ -22,7 +22,6 @@
     flex-direction: column;
     margin: 1%;
     width: 20%;
-    height: 50vh;
     border-radius: 15px;
     box-shadow: 3px 3px 10px gray;
     font-size: 13px;
@@ -33,12 +32,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
-    height: 20%;
+    height: 25%;
 }
 
 .setsName{
     margin: 0px;
     margin-left: 5px;
+    margin-top: 5px;
 }
 
 .ingredients{
@@ -226,6 +226,7 @@
 
 .toaster{
     font-family: 'Nunito', sans-serif;
+    text-align: center;
 }
 
 
@@ -249,7 +250,7 @@
         margin-bottom: 5px;
     }
     .coco{
-        margin-top: 10vh;
+        margin-top: 0vh;
         width: 100%;
     }
     .BtnNextPage{

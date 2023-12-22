@@ -24,7 +24,7 @@ const FuncBurger = () => {
             });
     }, []);
 
-    const setOrder = (Name, Id, Price, Image, Size) => {
+    const setOrder = (Name, Id, Price, Image) => {
         const existingItem = order.find(
             (item) => item.Id === Id 
         );
@@ -46,7 +46,6 @@ const FuncBurger = () => {
                         Id,
                         Price,
                         Image,
-                        Size,
                         quantity: 1,
                     },
                 ])
@@ -58,7 +57,7 @@ const FuncBurger = () => {
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
-                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
+                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=BURGER&size=8`)
                 .then((response) => {
                     setBurger((prevBurger) => [...prevBurger, ...response.data.data]);
                     setCurrentPage(nextPage);
@@ -74,15 +73,17 @@ const FuncBurger = () => {
     return (
         <>
             <div className={styles.toaster}>
-                <Toaster position="top-center" reverseOrder={true} />
+                <Toaster position="top-center" 
+                reverseOrder={true} 
+                />
             </div>
             {burger.map((burger, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={burger.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={burger.mainImageUrl} alt="Комбо бургер Стрий" />
                     </div>
                     <div className={styles.cardText}>
-                        <h1 className={styles.burgerName}>{burger.name}</h1>
+                        <h2 className={styles.burgerName}>{burger.name}</h2>
                         <p className={styles.ingredients}> {burger.ingredients.join(", ")}</p>
                     </div>
                     <div className={styles.footerCard}>
@@ -98,9 +99,7 @@ const FuncBurger = () => {
                                         burger.id,
                                         burger.price,
                                         burger.mainImageUrl,
-                                        false,
-                                        index,
-                                        toast.success('Додано в кошик')
+                                        toast.success(`${burger.name} \nДодано в кошик`)
                                     )
                                 }
                             >

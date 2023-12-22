@@ -25,7 +25,7 @@ const [sets, setSets] = useState([]);
             });
     }, []);
 
-    const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
+    const setOrder = (Name, Id, Price, Image) => {
         const existingItem = order.find(
             (item) => item.Id === Id 
         );
@@ -47,9 +47,7 @@ const [sets, setSets] = useState([]);
                         Id,
                         Price,
                         Image,
-                        Size,
                         quantity: 1,
-                        hasCheeseCrust,
                     },
                 ])
             );
@@ -60,7 +58,7 @@ const [sets, setSets] = useState([]);
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
-                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
+                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=COMBO_MENU&size=8`)
                 .then((response) => {
                     setSets((prevSets) => [...prevSets, ...response.data.data]);
                     setCurrentPage(nextPage);
@@ -82,7 +80,7 @@ const [sets, setSets] = useState([]);
             {sets.map((sets, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={sets.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={sets.mainImageUrl} alt="Комбо комбо-меню Стрий" />
                     </div>
                     <div className={styles.cardText}>
                         <h2 className={styles.setsName}>{sets.name}</h2>
@@ -103,7 +101,7 @@ const [sets, setSets] = useState([]);
                                         sets.mainImageUrl,
                                         false,
                                         index,
-                                        toast.success('Додано в кошик')
+                                        toast.success(`${sets.name} \nДодано в кошик`)
                                     )
                                 }
                             >

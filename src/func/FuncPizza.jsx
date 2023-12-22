@@ -122,7 +122,7 @@ const Func = () => {
             {pizza.map((pizza, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={pizza.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={pizza.mainImageUrl} alt="доставка комбо піца Стрий" />
                     </div>
                     <div className={styles.cardText}>
                         <h2 className={styles.pizzaName}>{pizza.name}</h2>
@@ -160,7 +160,7 @@ const Func = () => {
                                     pizzaSizes[index],
                                     cheeseCrusts[index],
                                     index,
-                                    toast.success('Додано в кошик')
+                                    toast.success(`${pizza.name} \nДодано в кошик`)
                                 )}
                             >
                                 <img className={styles.basketImgBtn} src="корзина.png" alt="" />

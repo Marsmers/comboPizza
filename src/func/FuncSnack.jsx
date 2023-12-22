@@ -25,7 +25,7 @@ const [snack, setSnack] = useState([]);
             });
     }, []);
 
-    const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
+    const setOrder = (Name, Id, Price, Image) => {
         const existingItem = order.find(
             (item) => item.Id === Id 
         );
@@ -47,9 +47,7 @@ const [snack, setSnack] = useState([]);
                         Id,
                         Price,
                         Image,
-                        Size,
                         quantity: 1,
-                        hasCheeseCrust,
                     },
                 ])
             );
@@ -60,7 +58,7 @@ const [snack, setSnack] = useState([]);
         if (currentPage < totalPages - 1) {
             const nextPage = currentPage + 1;
             axios
-                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=PIZZA&size=8`)
+                .get(`https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=${nextPage}&productType=SNACK&size=8`)
                 .then((response) => {
                     setSnack((prevSnack) => [...prevSnack, ...response.data.data]);
                     setCurrentPage(nextPage);
@@ -72,7 +70,6 @@ const [snack, setSnack] = useState([]);
         }
     };
 
-    console.log(snack)
 
     return (
         <>
@@ -82,7 +79,7 @@ const [snack, setSnack] = useState([]);
             {snack.map((snack, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles["img-card"]}>
-                        <img className={styles["card-img"]} src={snack.mainImageUrl} alt="" />
+                        <img className={styles["card-img"]} src={snack.mainImageUrl} alt="Комбо снеки Стрий" />
                     </div>
                     <div className={styles.cardText}>
                         <h2 className={styles.snackName}>{snack.name}</h2>
@@ -101,9 +98,7 @@ const [snack, setSnack] = useState([]);
                                         snack.id,
                                         snack.price,
                                         snack.mainImageUrl,
-                                        false,
-                                        index,
-                                        toast.success('Додано в кошик')
+                                        toast.success(`${snack.name} \nДодано в кошик`)
                                     )
                                 }
                             >

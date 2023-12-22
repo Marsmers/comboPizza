@@ -26,6 +26,7 @@ flex-direction: column;
 width: 60%;
 height: 100%; 
 flex-wrap: wrap;
+align-items: center;
 }
 
 .inputRight {
@@ -72,14 +73,16 @@ align-items: center;
 width: 100%;
 }
 
-.rightPageDelyvery textarea {
+.rightPage textarea {
     width: 80%;
     height: 50px;
     margin: 10px;
     border: none;
     padding-left: 15px;
+    padding-top: 10px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px gray;
+    background-color: white;
     resize: none;
 }
 
@@ -107,7 +110,7 @@ display: flex;
 align-items: center;
 width: 95%;
 height: 70px;
-background-color: whitesmoke;
+background-color: rgba(245, 245, 245, 0.34);
 border-radius: 15px;
 overflow: hidden;
 justify-content: space-between;
@@ -208,6 +211,7 @@ h4{margin: 0;}
 display: flex;
 justify-content: center;
 align-items: center;
+text-align: center;
 flex-direction: column;
 width: 100%;
 height: 100%;
@@ -263,6 +267,7 @@ width: 30px;
 height: 30px;
 border-radius: 40px;
 text-align: center;
+background-color: rgba(255, 255, 255, 0.394);
 }
 
 .btnDelete:hover{
