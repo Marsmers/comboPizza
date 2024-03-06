@@ -1,207 +1,248 @@
 .cons {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .coco {
-    margin-top: 15vh;
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-family: 'Nunito', sans-serif;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-family: 'Nunito', sans-serif;
 }
 
-.slider{
-    width: 100vw;
-    height: 55vh;
-    border-radius: 10px;
-    margin-top: 5vh;
-    /* margin-bottom: 5vh; */
+.homePageHeader {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 5;
+	margin-bottom: 10vh;
 }
 
-.boxMenuLink{
-    width: 100%;
-    height: 50vh;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10vh;
+.homePageBacgoundContainer {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgb(20, 20, 20);
 }
 
-.boxMenuLink div{
-    width: 20%;
-    height: 25vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: 2px 2px 10px black;
+.homePageBacground {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.2;
 }
 
-.boxMenuLink div:hover{
-    scale: 105%;
-    transition: 0.5s;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.736);
-}
-a{
-    width: 100%;
-    height: 100%;
-    display: block;
-
-}
-.pizza{
-    background-image: url(https://tinypic.host/images/2023/12/07/photo_5445002351111950861_y.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-} 
-
-.headerMenu{
-    width: 100%;
-    height: 15%;
-    border-radius: 10px 10px 0px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    text-align: center;
-    background-color: rgba(255, 217, 0, 0.817);
-    font-family: 'Nunito', sans-serif;
-    color: white;
-    text-shadow: 1px 1px 3px black;
+.komboLogo {
+	top: 15%;
+	height: 40%;
+	position: absolute;
+	object-fit: contain;
 }
 
-.burger{
-    background-image: url(https://tinypic.host/images/2023/12/07/KEBAB-BURGER.jpeg);
+.homePageText {
+	position: absolute;
+	color: white;
+	text-align: center;
+	top: 60%;
 }
 
-.kebab{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(https://tinypic.host/images/2023/12/07/GRIBNII.jpeg);
+.homePageIconMouse {
+	position: absolute;
+	top: 80%;
 }
 
-.snack{
-    background-image: url(https://tinypic.host/images/2023/12/07/NAGETSI.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.slider {
+	width: 100vw;
+	height: 55vh;
+	border-radius: 10px;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
 }
 
-.salad{
-    background-image: url(https://potatorolls.com/wp-content/uploads/2020/10/Basic-Hot-Dogs-960x640.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.boxMenuLink {
+	width: 90%;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 55vh;
 }
 
-.sets{
-    background-image: url(https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.00.07.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.spanMenu {
+	background-color: orange;
+	width: 80%;
+	height: 2px;
+	display: block;
+	position: absolute;
 }
 
-.drinks{
-    background-image: url(https://5.imimg.com/data5/SELLER/Default/2020/10/FP/GL/OA/521830/soft-drinks.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.boxMenuLink div {
+	width: 20%;
+	margin: 1%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-.other{
-    background-image: url(https://tinypic.host/images/2023/12/09/ketchup.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}  
-.homePagePhotoBox{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5vh;
+a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.pizza {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(https://tinypic.host/images/2023/12/07/photo_5445002351111950861_y.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
+.headerMenu {
+	width: 100%;
+	height: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	text-align: center;
+	background-color: rgba(255, 217, 0, 0.817);
+	font-family: 'Nunito', sans-serif;
+	color: white;
+	text-shadow: 1px 1px 3px black;
+}
+
+.burger {
+	background-image: url(https://tinypic.host/images/2023/12/07/KEBAB-BURGER.jpeg);
+}
+
+.kebab {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(https://tinypic.host/images/2023/12/07/GRIBNII.jpeg);
+}
+
+.snack {
+	background-image: url(https://tinypic.host/images/2023/12/07/NAGETSI.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.salad {
+	background-image: url(https://potatorolls.com/wp-content/uploads/2020/10/Basic-Hot-Dogs-960x640.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.sets {
+	background-image: url(https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.00.07.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.drinks {
+	background-image: url(https://5.imimg.com/data5/SELLER/Default/2020/10/FP/GL/OA/521830/soft-drinks.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.other {
+	background-image: url(https://tinypic.host/images/2023/12/09/ketchup.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.homePagePhotoBox {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5vh;
+}
 
 .homePagePhoto {
-    width: 25vw;
-    height: 400px;
-    margin: 10px;
-    border-radius: 15px;
-    object-fit: cover;
+	width: 30vw;
+	height: 50vh;
+	margin: 10px;
+	border-radius: 15px;
+	object-fit: cover;
 }
 
-.homePagePhoto img{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    object-fit: cover;
-    text-align: center;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.571);
+.homePagePhoto img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	text-align: center;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.571);
 }
 
-.homePagePhoto :hover{
-    scale: 105%;
-    transition: 0.5s
-    ;
+.homePagePhoto :hover {
+	scale: 105%;
+	transition: 0.5s;
 }
-.textinfo{
-    text-align: center;
-    font-size: 25px;
-    border-radius: 15px;
-    margin-bottom: 5vh;
-    color: white;
-    width: 100%;
-    background-color: gold;
-    text-shadow: 2px 1px 3px rgb(0, 0, 0);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.555);
+.textinfo {
+	text-align: center;
+	font-size: 25px;
+	border-radius: 15px;
+	margin-bottom: 5vh;
+	color: white;
+	width: 100%;
+	background-color: gold;
+	text-shadow: 2px 1px 3px rgb(0, 0, 0);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.555);
 }
 
 .about {
-    padding-left: 0;
+	padding-left: 0;
 }
 
-
-
-.aboutUs{
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    color: black;
-    font-size: medium;
+.aboutUs {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	color: black;
+	font-size: medium;
 }
 
-.aboutUs h1{
-    -webkit-text-stroke: 2px black;
+.aboutUs h1 {
+	-webkit-text-stroke: 2px black;
 }
 
 @media screen and (max-width: 1024px) {
-    .coco{
-        margin-top: 10vh;
-        width: 100vw;
-    }
-    .boxMenuLink{
-        height: 100vh;
-    }
-    .aboutUs{
-        padding-left: 10px;
-    }
-    .coco{
-        margin-top: 0vh;
-    }
-    .homePagePhoto{
-        width: 44%;
-        height: 44%;
-    }
-    .homePagePhotoBox{
-        height: 100%;
-    }
-    .boxMenuLink div{
-        width: 44%;
-        font-size: medium;
-    }
-    .slider{height: 35vh;}
+	.coco {
+		margin-top: 10vh;
+		width: 100vw;
+	}
+	.boxMenuLink {
+		height: 100vh;
+	}
+	.aboutUs {
+		padding-left: 10px;
+	}
+	.coco {
+		margin-top: 0vh;
+	}
+	.homePagePhoto {
+		width: 44%;
+		height: 44%;
+	}
+	.homePagePhotoBox {
+		height: 100%;
+	}
+	.boxMenuLink div {
+		width: 44%;
+		font-size: medium;
+	}
+	.slider {
+		height: 35vh;
+	}
 }

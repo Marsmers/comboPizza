@@ -39,19 +39,16 @@ p{
     margin: 0;
 }
 .googleMaps{
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 10px;
-    width: 40vw;
+    width: 30vw;
     height: 35vh;
     border: 2px solid white;
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.507);
 }
-.delivery{
-    margin: 20px;
-    text-align: center;
-}
+
+
 .leftFooter{
-    width: 55%;
+    width: 85%;
     display: flex;
     align-items: center;
     flex-direction: column;

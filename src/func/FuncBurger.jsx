@@ -104,7 +104,6 @@ const FuncBurger = () => {
                                 }
                             >
                                 <img className={styles.basketImgBtn} src="корзина.png" alt="" />
-                                Купити
                             </button>
                         </div>
                     </div>

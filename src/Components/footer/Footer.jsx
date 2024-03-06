@@ -3,7 +3,6 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className='leftFooter'>
-
         <div className='contactsFooter'>
           <ul>
             <li><h3>Контакти</h3></li>
@@ -14,10 +13,6 @@ export default function Footer() {
           <h3>Графік роботи</h3>
           <p>10:00 - 22:00</p>
           <p>Без вихідних</p>
-        </div>
-        <div className='delivery'>
-          <h3>Безкоштовна доставка по місту</h3>
-          <p>від 350 грн</p>
         </div>
       </div>
         <div className='maps'>

@@ -7,37 +7,46 @@ export default function HomePage() {
   return (
     <div className={styles.cons}>
       <div className={styles.coco}>
+        <div className={styles.homePageHeader}>
+          <div className={styles.homePageBacgoundContainer}>
+           <img className={styles.homePageBacground} src="https://tinypic.host/images/2023/12/05/photo_5438253935287719848_y.jpeg" alt="" />
+          </div>
+          <img className={styles.komboLogo} src="/public/Logokombo.png" alt="" />
+          <h1 className={styles.homePageText}>Максимальний комфорт і задоволення <br /> від доставки комбо ! </h1>
+          <img className={styles.homePageIconMouse} src="/public/Mask group.png" alt="" />
+        </div>
           <div className={styles.slider}>
             <Slider/>
           </div>
           <div className={styles.boxMenuLink}>
             <div className={styles.pizza}>
-              <Link to="Піца"><p className={styles.headerMenu}>Піца</p></Link>
+              <span className={styles.spanMenu}>
+              </span>
+              <Link to="Піца"></Link>
             </div>
             <div className={styles.burger}>
-              <Link to="Бургери"><p className={styles.headerMenu}>Бургери</p></Link>
+              <Link to="Бургери"></Link>
             </div>
             <div className={styles.kebab}>
-              <Link to="Кебаби"><p className={styles.headerMenu}>Кебаби</p></Link>
+              <Link to="Кебаби"></Link>
             </div>
             <div className={styles.snack}>
-              <Link to="Снеки"><p className={styles.headerMenu}>Снеки</p></Link>
+              <Link to="Снеки"></Link>
             </div>
             <div className={styles.salad}>
               
-              <Link to="Хот-доги"><p className={styles.headerMenu}>Хот-Доги</p></Link>
+              <Link to="Хот-доги"></Link>
             </div>
             <div className={styles.sets}>
-             
-              <Link to="Комбо-меню"> <p className={styles.headerMenu}>Сети</p></Link>
+              <Link to="Комбо-меню"></Link>
             </div>
             <div className={styles.drinks}>
              
-              <Link to="Напої"> <p className={styles.headerMenu}>Напої</p></Link>
+              <Link to="Напої"> </Link>
             </div>
             <div className={styles.other}>
              
-              <Link to="Інше"><p className={styles.headerMenu}>Інше</p></Link>
+              <Link to="Інше"></Link>
             </div>
           </div>
             <h1 className={styles.textinfo}>Завітай у Kombo 🔥</h1>

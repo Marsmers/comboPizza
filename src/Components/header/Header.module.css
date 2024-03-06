@@ -1,236 +1,279 @@
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.ubuntu-condensed-regular {
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.bucketLogo{
-    width: 0px;
-    height: 0px;
+
+
+.container {
+	font-family: Ubuntu Condensed ,sans-serif;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.bucketLogo {
+	width: 0px;
+	height: 0px;
 }
 .bucketLogo img {
-    height: 0%;
+	height: 0%;
+}
 
-  }
-
-.bucektIndexMob{
-    width: 0px;
-    height: 0px;
-}  
-.bucektIndexMob{
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
-}  
+.bucektIndexMob {
+	width: 0px;
+	height: 0px;
+}
+.bucektIndexMob {
+	width: 0px;
+	height: 0px;
+	visibility: hidden;
+}
 
 .header {
-  margin: 5px;
-  z-index: 999;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* width: 75%; */
-  height: 80px;
-  border-radius: 40px;
-  background-color: rgb(0, 0, 0);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.603);
+	margin: 0px 5px 5px 5px;
+	z-index: 999;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 150px;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 1) 45%,
+		rgba(0, 0, 0, 0.457) 75%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+.headerInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.headerInfo p {
+	color: white;
+}
+
+.headerPhone {
+	font-size: 30px;
+}
+
+.colorTextPhone {
+	color: rgb(255, 208, 0);	
+
 }
 
 .headerLogo {
-  margin: 10px;
-  margin-left: 40px;
-  cursor: pointer;
+	margin: 10px;
+	margin-left: 40px;
+	cursor: pointer;
 }
 
 .komboLogo {
-  flex: 1;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
+	flex: 1;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
 }
 
 .ulHeader {
-  display: flex;
-  align-items: center;
-  padding: 0;
+	display: flex;
+	align-items: center;
+	padding: 0px;
+}
+
+.ulHeader li a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ulHeader p {
+	font-family: Ubuntu Condensed ,sans-serif;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.ulHeader li a img {
+	width: 50px;
+	height: 50px;
+}
+
+.ulHeader li a img:hover {
+	margin-bottom: 5px;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 li p {
-  margin: 1rem;
-  list-style: none;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  font-family: "Nunito", sans-serif;
-}
-
-li p:hover {
-  color: yellow;
-  text-shadow: 5px 5px 15px yellow;
+	margin: 1.2rem;
+	list-style: none;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	font-family: 'Nunito', sans-serif;
 }
 
 link {
-  list-style: none;
+	list-style: none;
 }
 
 .bucket {
-  display: flex;
-  margin-left: 100%;
+	display: flex;
+	margin-left: 100%;
 }
 
 .bucketIcon {
-  width: 100px;
-  height: 50px;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-  background-color: gold;
+	width: 100px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15px;
+	margin-right: 5%;
 }
 
 .bucketIcon img {
-  width: 50px;
+	width: 50px;
 }
 
 .bucketIcon a {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
 }
 
 .bucketIcon p {
-  font-size: 20px;
+	font-family: Ubuntu Condensed ,sans-serif;
+	font-size: 25px;
 }
 
 .bucektIndex {
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 30px;
+	height: 30px;
+	background-color: rgb(255, 208, 0);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .komboLogoBurger {
-  width: 0px;
-  height: 0px;
+	width: 0px;
+	height: 0px;
 }
 
 @media screen and (max-width: 1024px) {
-  .komboLogoBurger {
-    flex: 1;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-  }
-  .header {
-    opacity: 0;
-    z-index: -100;
-    width: 0px;
-    height: 0px;
-  }
+	.komboLogoBurger {
+		flex: 1;
+		width: 60px;
+		height: 60px;
+		cursor: pointer;
+	}
+	.header {
+		opacity: 0;
+		z-index: -100;
+		width: 0px;
+		height: 0px;
+	}
 
-  .ulHeader {
-    z-index: -100;
-    opacity: 0;
-    width: 0px;
-    height: 0px;
-  }
+	.ulHeader {
+		z-index: -100;
+		opacity: 0;
+		width: 0px;
+		height: 0px;
+	}
 
-  .bucketIcon {
-    z-index: -100;
-    opacity: 0;
-    width: 0px;
-    height: 0px;
-  }
+	.bucketIcon {
+		z-index: -100;
+		opacity: 0;
+		width: 0px;
+		height: 0px;
+	}
 
-  .headerLogo {
-    z-index: -100;
-    opacity: 0;
-    width: 0px;
-    height: 0px;
-  }
+	.headerLogo {
+		z-index: -100;
+		opacity: 0;
+		width: 0px;
+		height: 0px;
+	}
 
-  .container {
-    margin-top: 15vh;
-  }
+	.container {
+		margin-top: 15vh;
+	}
 
-  
-  .bucketLogo {
-    position: relative;
-    left: 30%;
-    width: 60px;
-    height: 50px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    background-color: gold;
-  }
-  .bucektIndexMob{
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    width: 20px;
-    height: 20px;
-    visibility: visible;
-    font-family: "Nunito", sans-serif;
+	.bucketLogo {
+		position: relative;
+		left: 30%;
+		width: 60px;
+		height: 50px;
+		border-radius: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 15px;
+		background-color: gold;
+	}
+	.bucektIndexMob {
+		width: 30px;
+		height: 30px;
+		background-color: black;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+		width: 20px;
+		height: 20px;
+		visibility: visible;
+		font-family: 'Nunito', sans-serif;
+	}
+	.bucketLogo img {
+		height: 100%;
+		margin: 0;
+	}
 
-  }
-  .bucketLogo img {
-    height: 100%;
-    margin: 0;
-  }
+	.bucketLogo a {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
 
-  .bucketLogo a {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
+	.bucketLogo p {
+		font-size: 15px;
+	}
 
-  .bucketLogo p {
-    font-size: 15px;
-  }
+	.burgerMenu {
+		height: 100px;
+		background-color: rgb(0, 0, 0);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-  .burgerMenu {
-    height: 100px;
-    background-color: black;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+		visibility: visible;
+		position: fixed;
+		z-index: 10;
+	}
 
-    visibility: visible;
-    position: fixed;
-    z-index: 10;
-  }
-
-  .komboLogoBurger {
-    position: fixed;
-    top: 20px;
-    left: 10px;
-  }
+	.komboLogoBurger {
+		position: fixed;
+		top: 20px;
+		left: 10px;
+	}
 }

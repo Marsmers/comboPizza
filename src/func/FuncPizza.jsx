@@ -130,10 +130,10 @@ const Func = () => {
                     </div>
                     <div className={styles.footerCard}>
                         <div className={styles.sizeBtn}>
-                            <button
+                            <button type="radio"
                                 className={`${styles.btnSizeLeft} ${pizzaSizes[index] === "35см" ? styles.active : ""}`}
                                 onClick={() => handleSizeChange(index, "35см")}>35см</button>
-                            <button
+                            <button type="radio"
                                 className={`${styles.btnSizeRigth} ${pizzaSizes[index] === "47см" ? styles.active : ""}`}
                                 onClick={() => handleSizeChange(index, "47см")}>47см</button>
                         </div>
