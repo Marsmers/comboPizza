@@ -126,14 +126,15 @@ const Func = () => {
                     </div>
                     <div className={styles.cardText}>
                         <h2 className={styles.pizzaName}>{pizza.name}</h2>
+                        <span className={styles.pizzaSpan}></span>
                         <p className={styles.ingredients}> {pizza.ingredients.join(", ")}</p>
                     </div>
                     <div className={styles.footerCard}>
                         <div className={styles.sizeBtn}>
-                            <button type="radio"
+                            <button 
                                 className={`${styles.btnSizeLeft} ${pizzaSizes[index] === "35см" ? styles.active : ""}`}
                                 onClick={() => handleSizeChange(index, "35см")}>35см</button>
-                            <button type="radio"
+                            <button 
                                 className={`${styles.btnSizeRigth} ${pizzaSizes[index] === "47см" ? styles.active : ""}`}
                                 onClick={() => handleSizeChange(index, "47см")}>47см</button>
                         </div>
@@ -145,10 +146,9 @@ const Func = () => {
                         </button>
                         <div className={styles.footerBottom}>
                             <h3 className={styles.cardFooterPrice}>
-                                Ціна:
                                 {pizzaSizes[index] === "47см"
                                     ? pizzaPrice("47см", pizza) + (cheeseCrusts[index] ? cheeseCrustPrice["47см"] : 0)
-                                    : pizzaPrice("35см", pizza) + (cheeseCrusts[index] ? cheeseCrustPrice["35см"] : 0)}
+                                    : pizzaPrice("35см", pizza) + (cheeseCrusts[index] ? cheeseCrustPrice["35см"] : 0)} грн
                             </h3>
                             <button
                                 className={styles.btnOrder}
@@ -164,7 +164,6 @@ const Func = () => {
                                 )}
                             >
                                 <img className={styles.basketImgBtn} src="корзина.png" alt="" />
-                                Купити
                             </button>
                         </div>
                     </div>

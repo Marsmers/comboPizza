@@ -8,7 +8,6 @@
 .coco {
 	margin-top: 15vh;
 	width: 90%;
-	height: 100%;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -19,12 +18,14 @@
 	background-color: white;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	margin: 1%;
 	width: 20%;
 	border-radius: 0px 35px 0px 35px;
 	font-size: 13px;
 	overflow: hidden;
 	box-shadow: 9px 7px 21px -12px rgba(0, 0, 0, 0.75);
+
 }
 
 .cardText {
@@ -39,13 +40,14 @@
 	margin: 0px;
 	margin-left: 15px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .ingredients {
-	margin: 5px;
 	font-size: larger;
 	margin-left: 15px;
+	margin-bottom: 5px;
 	color: gray;
 }
 
@@ -57,7 +59,8 @@
 .img-card {
 	background-color: black;
 	overflow: hidden;
-	height: 300px;
+	height: 25vh;
+	min-height: 25vh;
 	border-radius: 0px 0px 0px 30px;
 }
 
@@ -74,7 +77,7 @@
 	align-items: center;
 	justify-content: end;
 	width: 100%;
-	height: 25%;
+	height: 15%;
 }
 
 .cardFooterPrice {
@@ -87,7 +90,7 @@
 
 .footerBottom {
 	width: 100%;
-	height: 60%;
+	height: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

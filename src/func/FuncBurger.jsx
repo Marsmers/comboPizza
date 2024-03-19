@@ -89,7 +89,7 @@ const FuncBurger = () => {
                     <div className={styles.footerCard}>
                         <div className={styles.footerBottom}>
                             <h3 className={styles.cardFooterPrice}>
-                                Ціна: {burger.price}
+                                {burger.price} грн
                             </h3>
                             <button
                                 className={styles.btnOrder}

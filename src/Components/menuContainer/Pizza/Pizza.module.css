@@ -21,24 +21,36 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	align-items: center;
 	margin: 1%;
 	width: 20%;
-	border-radius: 15px;
+	border-radius: 5px;
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.494);
 	font-size: 13px;
 	overflow: hidden;
 }
 .cardText {
+	text-align: center;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	align-items: start;
+	justify-content: start;
+	align-items: center;
 	height: 25%;
 }
 
 .pizzaName {
-	margin: 0px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: #ffa800;
+	margin-top: 5px;
 	margin-left: 5px;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+.pizzaSpan{
+	width: 150px;
+	height: 3px;
+	background-color: #ffa800;
 }
 
 .ingredients {
@@ -59,15 +71,15 @@
 .img-card {
 	overflow: hidden;
 	width: 100%;
-	height: 200px;
-	border-radius: 15px 15px 0px 0px;
+	height: 250px;
+	border-radius: 5px 5px 0px 0px;
 }
 
 .img-card .card-img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 10px 10px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
 }
 
 .footerCard {
@@ -80,6 +92,7 @@
 }
 
 .cardFooterPrice {
+	font-size: large;
 	margin: 0;
 	width: 50%;
 	text-align: center;
@@ -189,6 +202,7 @@
 	border: none;
 	padding-right: 15px;
 	font-size: larger;
+	background-color: #ffa800;
 }
 
 .btnOrder:hover {
