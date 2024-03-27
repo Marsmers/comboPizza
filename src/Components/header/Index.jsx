@@ -43,49 +43,52 @@ export default function Index() {
 					<ul className={styles.ulHeader}>
 						<li>
 							<Link to='Піца'>
-								<img src="/public/pizza.png" alt="" />
+								<img src='/public/pizza.png' alt='' />
 								<p>Піца</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Бургери'>
-								<img src="/public/burger.png" alt="" />
+								<img
+									src='https://github.com/Marsmers/comboPizza/blob/main/public/burger.png'
+									alt=''
+								/>
 								<p>Бургери</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Кебаби'>
-								<img src="/public/kebab.png" alt="" />
+								<img src='/public/kebab.png' alt='' />
 								<p>Кебаби</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Снеки'>
-								<img src="/public/snack.png" alt="" />
+								<img src='/public/snack.png' alt='' />
 								<p>Снеки</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Хот-доги'>
-								<img src="/public/hot-dog.png" alt="" />
+								<img src='/public/hot-dog.png' alt='' />
 								<p>Хот-дог</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Комбо-меню'>
-								<img src="/public/kombo.png" alt="" />
+								<img src='/public/kombo.png' alt='' />
 								<p>Комбо меню</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Напої'>
-								<img src="/public/drink.png" alt="" />
+								<img src='/public/drink.png' alt='' />
 								<p>Напої</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Інше'>
-								<img src="/public/other.png" alt="" />
+								<img src='/public/other.png' alt='' />
 								<p>Інше</p>
 							</Link>
 						</li>
