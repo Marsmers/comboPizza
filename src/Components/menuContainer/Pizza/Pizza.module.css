@@ -57,11 +57,7 @@
 	margin: 5px;
 	color: gray;
 }
-.card:hover {
-	scale: 105%;
-	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.494);
-	transition: 500ms ease;
-}
+
 
 .card:hover .card-img {
 	scale: 140%;

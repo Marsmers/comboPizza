@@ -1,0 +1,118 @@
+.footer {
+	width: 100vw;
+	height: 100%;
+	color: white;
+	display: flex;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.808);
+}
+
+
+.logoFooter {
+	height: 15vh;
+	margin-left: 20px;
+	margin-right: 50px;
+}
+
+
+.strongFontFooter{
+	font-size: large;
+	margin-right: 5px;
+	color: gold;
+}
+
+.InfoFooter{
+	color: rgb(200, 200, 200);
+}
+
+.downLeftFooter{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	margin-left: 25px;
+}
+
+.headerPhone{
+	font-size: 30px;
+
+}
+
+
+.colorTextPhone{
+	color: gold;
+}
+
+
+.links{
+	display: flex;
+	margin-left: 20px;
+}
+
+
+.linkTikTok{
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+}
+
+.linkTikTok img {
+	width: 100%;
+}
+
+.linkInst{
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+}
+
+.linkInst img {
+	width: 100%;
+}
+
+a {
+	color: white;
+}
+a:hover {
+	color: gold;
+}
+
+p {
+	margin: 0;
+}
+
+.googleMaps {
+	border-radius: 5px;
+	margin: 10px;
+	width: 40vw;
+	height: 30vh;
+	border: 2px solid white;
+}
+
+.leftFooter {
+	height: 30vh;
+	width: 65%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.heightLeftFooter {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+	.footer {
+		flex-direction: column;
+	}
+	.maps {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.googleMaps {
+		width: 90%;
+	}
+}

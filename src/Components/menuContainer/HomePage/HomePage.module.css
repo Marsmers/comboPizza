@@ -4,6 +4,7 @@
 	justify-content: center;
 	align-items: center;
 	background-color: gray;
+	background-image: url(/public/vecteezy_fundo-de-textura-de-pedra-preta-escura_2223734.jpg);
 }
 
 .coco {
@@ -121,7 +122,6 @@
 	margin-bottom: 10vh;
 }
 
-
 .boxMenuLink > div {
 	width: 20%;
 	margin: 1%;
@@ -160,8 +160,6 @@ a {
 	justify-content: center;
 	align-items: center;
 }
-
-
 
 .boxMenuLinkContainer {
 	z-index: 2;
@@ -355,9 +353,12 @@ a {
 	border-radius: 15px;
 	object-fit: cover;
 }
-
-.homePagePhoto h3{
+.homePagePhoto h1 {
+	color: whitesmoke;
+}
+.homePagePhoto h3 {
 	margin: 20px;
+	color: rgb(186, 186, 186);
 }
 .homePagePhoto img {
 	width: 100%;
@@ -367,7 +368,6 @@ a {
 	border-radius: 5px;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.571);
 }
-
 
 .about {
 	padding-left: 0;
