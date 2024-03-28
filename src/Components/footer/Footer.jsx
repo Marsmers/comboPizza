@@ -6,7 +6,7 @@ export default function Footer() {
 				<div className={styles.heightLeftFooter}>
 					<img
 						className={styles.logoFooter}
-						src='/public/Logokombo.png'
+						src='Logokombo.png'
 						alt=''
 					/>
 					<p className={styles.InfoFooter}>
