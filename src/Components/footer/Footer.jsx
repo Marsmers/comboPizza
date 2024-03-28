@@ -37,13 +37,13 @@ export default function Footer() {
 							className={styles.linkTikTok}
 							href='https://www.tiktok.com/@kombo_kebab'
 						>
-							<img src='/public/tiktok.png' alt='' />
+							<img src='tiktok.png' alt='' />
 						</a>
 						<a
 							className={styles.linkInst}
 							href='https://www.instagram.com/kombo_kebab/'
 						>
-							<img src='/public/instagram.png' alt='' />
+							<img src='instagram.png' alt='' />
 						</a>
 					</div>
 			</div>

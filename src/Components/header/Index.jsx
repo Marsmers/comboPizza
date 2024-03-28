@@ -15,14 +15,14 @@ export default function Index() {
 					<Link to=''>
 						<img
 							className={styles.komboLogoBurger}
-							src='Logokombo.png'
+							src="Logokombo.png"
 							alt='Logo'
 						/>
 					</Link>
 				</div>
 				<div className={styles.bucketLogo}>
 					<Link to='Корзина'>
-						<img src='bucket.png' alt='' />
+						<img src="bucket.png" alt='' />
 						<div className={styles.bucektIndexMob}>
 							<p>{order}</p>
 						</div>
@@ -35,60 +35,57 @@ export default function Index() {
 						<Link to=''>
 							<img
 								className={styles.komboLogo}
-								src='Logokombo.png'
-								alt='Logo'
+								src="Logokombo.png"
+								alt="Logo"
 							/>
 						</Link>
 					</div>
 					<ul className={styles.ulHeader}>
 						<li>
 							<Link to='Піца'>
-								<img src='/public/pizza.png' alt='' />
+								<img src="pizza.png" alt="" />
 								<p>Піца</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Бургери'>
-								<img
-									src='https://github.com/Marsmers/comboPizza/blob/main/public/burger.png'
-									alt=''
-								/>
+								<img src="burger.png" alt="" />
 								<p>Бургери</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Кебаби'>
-								<img src='/public/kebab.png' alt='' />
+								<img src="kebab.png" alt="" />
 								<p>Кебаби</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Снеки'>
-								<img src='/public/snack.png' alt='' />
+								<img src="snack.png" alt="" />
 								<p>Снеки</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Хот-доги'>
-								<img src='/public/hot-dog.png' alt='' />
+								<img src="hot-dog.png" alt="" />
 								<p>Хот-дог</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Комбо-меню'>
-								<img src='/public/kombo.png' alt='' />
+								<img src="kombo.png" alt="" />
 								<p>Комбо меню</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Напої'>
-								<img src='/public/drink.png' alt='' />
+								<img src="drink.png" alt="" />
 								<p>Напої</p>
 							</Link>
 						</li>
 						<li>
 							<Link to='Інше'>
-								<img src='/public/other.png' alt='' />
+								<img src="other.png" alt="" />
 								<p>Інше</p>
 							</Link>
 						</li>
@@ -107,9 +104,6 @@ export default function Index() {
 					<li className={styles.bucketIcon}>
 						<Link to='Корзина'>
 							<img src='busket.png' alt='' />
-							{/* <div className={styles.bucektIndex}>
-								<p>{order}</p>
-							</div> */}
 							<p>Кошик</p>
 						</Link>
 					</li>

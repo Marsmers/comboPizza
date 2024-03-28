@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom'
-import styles from '../HomePage/HomePage.module.css' // Замініть 'HomePage' на назву вашого компонента
+import styles from '../HomePage/HomePage.module.css' 
 import Slider from '../slider/Slider.jsx'
 
 export default function HomePage() {
@@ -16,7 +16,7 @@ export default function HomePage() {
 					</div>
 					<img
 						className={styles.komboLogo}
-						src='/public/Logokombo.png'
+						src='Logokombo.png'
 						alt=''
 					/>
 					<h1 className={styles.homePageText}>
@@ -24,7 +24,7 @@ export default function HomePage() {
 					</h1>
 					<img
 						className={styles.homePageIconMouse}
-						src='/public/Mask group.png'
+						src='Mask group.png'
 						alt=''
 					/>
 				</div>
@@ -51,7 +51,7 @@ export default function HomePage() {
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
-									src='/public/pizza.png'
+									src='pizza.png'
 									alt=''
 								/>
 								<p className={styles.boxMenuText}>Піца</p>
@@ -70,7 +70,7 @@ export default function HomePage() {
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
-									src='/public/burger.png'
+									src='burger.png'
 									alt=''
 								/>
 								<p className={styles.boxMenuText}>Бургери</p>
@@ -89,7 +89,7 @@ export default function HomePage() {
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
-									src='/public/kebab.png'
+									src='kebab.png'
 									alt=''
 								/>
 								<p className={styles.boxMenuText}>Кебаб</p>
@@ -108,7 +108,7 @@ export default function HomePage() {
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
-									src='/public/snack.png'
+									src='snack.png'
 									alt=''
 								/>
 								<p className={styles.boxMenuText}>Снеки</p>
@@ -127,7 +127,7 @@ export default function HomePage() {
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
-									src='/public/hot-dog.png'
+									src='hot-dog.png'
 									alt=''
 								/>
 								<p className={styles.boxMenuText}>Хот-Дог</p>
@@ -146,7 +146,7 @@ export default function HomePage() {
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
-									src='/public/kombo.png'
+									src='kombo.png'
 									alt=''
 								/>
 								<p className={styles.boxMenuText}>Комбо меню</p>
@@ -165,7 +165,7 @@ export default function HomePage() {
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
-									src='/public/drink.png'
+									src='drink.png'
 									alt=''
 								/>
 								<p className={styles.boxMenuText}>Напої</p>
@@ -184,7 +184,7 @@ export default function HomePage() {
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
-									src='/public/other.png'
+									src='other.png'
 									alt=''
 								/>
 								<p className={styles.boxMenuText}>Інше</p>

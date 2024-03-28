@@ -4,9 +4,8 @@
 	color: white;
 	display: flex;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.808);
+background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
 }
-
 
 .logoFooter {
 	height: 15vh;
@@ -14,18 +13,17 @@
 	margin-right: 50px;
 }
 
-
-.strongFontFooter{
+.strongFontFooter {
 	font-size: large;
 	margin-right: 5px;
 	color: gold;
 }
 
-.InfoFooter{
+.InfoFooter {
 	color: rgb(200, 200, 200);
 }
 
-.downLeftFooter{
+.downLeftFooter {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -33,24 +31,20 @@
 	margin-left: 25px;
 }
 
-.headerPhone{
+.headerPhone {
 	font-size: 30px;
-
 }
 
-
-.colorTextPhone{
+.colorTextPhone {
 	color: gold;
 }
 
-
-.links{
+.links {
 	display: flex;
 	margin-left: 20px;
 }
 
-
-.linkTikTok{
+.linkTikTok {
 	width: 50px;
 	height: 50px;
 	margin: 10px;
@@ -60,7 +54,7 @@
 	width: 100%;
 }
 
-.linkInst{
+.linkInst {
 	margin: 10px;
 	width: 50px;
 	height: 50px;
