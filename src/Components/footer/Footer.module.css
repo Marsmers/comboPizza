@@ -100,6 +100,8 @@ p {
 @media screen and (max-width: 767px) {
 	.footer {
 		flex-direction: column;
+		min-height: 80vh;
+		justify-content: space-between;
 	}
 	.maps {
 		width: 100%;
@@ -108,5 +110,26 @@ p {
 	}
 	.googleMaps {
 		width: 90%;
+		height: 25vh;
+	}
+	.logoFooter{
+		margin: 0;
+	}
+	.heightLeftFooter{
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+	.downLeftFooter{
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	.links{
+		justify-content: center;
+		margin: 0;
 	}
 }

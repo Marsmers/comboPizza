@@ -2,6 +2,7 @@
 	width: 100vw;
 	display: flex;
 	justify-content: center;
+	    	min-height: 70vh;
 	align-items: center;
     background-image: url(/public/vecteezy_fundo-de-textura-de-pedra-preta-escura_2223734.jpg);
 }
@@ -20,6 +21,7 @@
 	background-color: white;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	margin: 1%;
 	width: 20%;
 	border-radius: 0px 35px 0px 35px;
@@ -59,7 +61,8 @@
 
 .img-card {
 	overflow: hidden;
-	height: 300px;
+	height: 25vh;
+	min-height: 25vh;
 	border-radius: 0px 0px 0px 30px;
 }
 
@@ -76,7 +79,6 @@
 	align-items: center;
 	justify-content: end;
 	width: 100%;
-	height: 25%;
 }
 
 .cardFooterPrice {
@@ -174,23 +176,19 @@
 
 @media screen and (max-width: 767px) {
 	.card {
-		width: 70%;
-		height: 50vh;
+		width: 45%;
 		margin-bottom: 5px;
 	}
 	.coco {
-		margin-top: 0vh;
 		width: 100%;
+		margin-bottom: 5vh;
 	}
 	.BtnNextPage {
 		width: 40%;
 	}
-	.img-card {
-		height: 100%;
-	}
+
 	.cardText {
 		height: 30%;
-		margin-top: 10px;
 	}
 	.hotdogName {
 		font-size: large;
@@ -205,13 +203,12 @@
 		font-size: small;
 	}
 	.cardFooterPrice {
-		font-size: small;
+		font-size: large;
 	}
 	.btnOrder {
 		font-size: small;
-		padding-right: 10px;
 	}
 	.footerBottom {
-		height: 50%;
+		height: 100%;
 	}
 }

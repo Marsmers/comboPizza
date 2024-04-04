@@ -89,7 +89,7 @@ const [hotdog, setHotDog] = useState([]);
                     <div className={styles.footerCard}>
                         <div className={styles.footerBottom}>
                             <h3 className={styles.cardFooterPrice}>
-                                Ціна: {hotdog.price}
+                                {hotdog.price} грн
                             </h3>
                             <button
                                 className={styles.btnOrder}
@@ -104,7 +104,6 @@ const [hotdog, setHotDog] = useState([]);
                                 }
                             >
                                 <img className={styles.basketImgBtn} src="корзина.png" alt="" />
-                                Купити
                             </button>
                         </div>
                     </div>

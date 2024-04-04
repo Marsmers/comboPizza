@@ -108,80 +108,80 @@ const FuncKebab = () => {
   };
 
   return (
-    <>
-      <div className={styles.toaster}>
-        <Toaster position="top-center" reverseOrder={true} />
-      </div>
-      {kebab.map((kebab, index) => (
-        <div key={index} className={styles.card}>
-          <div className={styles["img-card"]}>
-            <img
-              className={styles["card-img"]}
-              src={kebab.mainImageUrl}
-              alt="Комбо кебаб Стрий"
-            />
-          </div>
-          <div className={styles.cardText}>
-            <h2 className={styles.kebabName}>{kebab.name}</h2>
-            <p className={styles.ingredients}>
-              {" "}
-              {kebab.ingredients.join(", ")}
-            </p>
-          </div>
-          <div className={styles.footerCard}>
-            <div className={styles.sizeBtn}>
-              <button
-                className={`${styles.btnSizeLeft} ${
-                  kebabSizes[index] === "L" ? styles.active : ""
-                }`}
-                onClick={() => handleSizeChange(index, "L")}
-              >
-                L
-              </button>
-              <button
-                className={`${styles.btnSizeRigth} ${
-                  kebabSizes[index] === "XL" ? styles.active : ""
-                }`}
-                onClick={() => handleSizeChange(index, "XL")}
-              >
-                XL
-              </button>
-            </div>
-            <div className={styles.footerBottom}>
-              <h3 className={styles.cardFooterPrice}>
-                Ціна:
-                {kebabSizes[index] === "XL"
-                  ? kebabPrice("XL", kebab)
-                  : kebabPrice("L", kebab)}
-              </h3>
-              <button
-                className={styles.btnOrder}
-                onClick={() =>
-                  setOrder(
-                    kebab.name,
-                    kebab.id,
-                    kebabPrice(kebabSizes[index], kebab),
-                    kebab.mainImageUrl,
-                    kebabSizes[index],
-                    index,
-                    toast.success(`${kebab.name} \nДодано в кошик`)
-                  )
-                }
-              >
-                <img className={styles.basketImgBtn} src="корзина.png" alt="" />
-                Купити
-              </button>
-            </div>
-          </div>
-        </div>
-      ))}
-      {currentPage < totalPages - 1 && (
-        <button className={styles.BtnNextPage} onClick={loadMoreKebab}>
-          Показати ще
-        </button>
-      )}
-    </>
-  );
+		<>
+			<div className={styles.toaster}>
+				<Toaster position='top-center' reverseOrder={true} />
+			</div>
+			{kebab.map((kebab, index) => (
+				<div key={index} className={styles.card}>
+					<div className={styles['img-card']}>
+						<img
+							className={styles['card-img']}
+							src={kebab.mainImageUrl}
+							alt='Комбо кебаб Стрий'
+						/>
+					</div>
+					<div className={styles.cardText}>
+						<h2 className={styles.kebabName}>{kebab.name}</h2>
+						<span className={styles.kebabSpan}></span>
+						<p className={styles.ingredients}>
+							{' '}
+							{kebab.ingredients.join(', ')}
+						</p>
+					</div>
+					<div className={styles.footerCard}>
+						<div className={styles.sizeBtn}>
+							<button
+								className={`${styles.btnSizeLeft} ${
+									kebabSizes[index] === 'L' ? styles.active : ''
+								}`}
+								onClick={() => handleSizeChange(index, 'L')}
+							>
+								L
+							</button>
+							<button
+								className={`${styles.btnSizeRigth} ${
+									kebabSizes[index] === 'XL' ? styles.active : ''
+								}`}
+								onClick={() => handleSizeChange(index, 'XL')}
+							>
+								XL
+							</button>
+						</div>
+						<div className={styles.footerBottom}>
+							<h3 className={styles.cardFooterPrice}>
+								{kebabSizes[index] === 'XL'
+									? kebabPrice('XL', kebab)
+									: kebabPrice('L', kebab)}{' '}
+								грн
+							</h3>
+							<button
+								className={styles.btnOrder}
+								onClick={() =>
+									setOrder(
+										kebab.name,
+										kebab.id,
+										kebabPrice(kebabSizes[index], kebab),
+										kebab.mainImageUrl,
+										kebabSizes[index],
+										index,
+										toast.success(`${kebab.name} \nДодано в кошик`)
+									)
+								}
+							>
+								<img className={styles.basketImgBtn} src='корзина.png' alt='' />
+							</button>
+						</div>
+					</div>
+				</div>
+			))}
+			{currentPage < totalPages - 1 && (
+				<button className={styles.BtnNextPage} onClick={loadMoreKebab}>
+					Показати ще
+				</button>
+			)}
+		</>
+	)
 };
 
 export default FuncKebab;

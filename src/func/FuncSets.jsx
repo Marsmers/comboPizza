@@ -89,7 +89,7 @@ const [sets, setSets] = useState([]);
                     <div className={styles.footerCard}>
                         <div className={styles.footerBottom}>
                             <h3 className={styles.cardFooterPrice}>
-                                Ціна: {sets.price}
+                                {sets.price} грн
                             </h3>
                             <button
                                 className={styles.btnOrder}
@@ -106,7 +106,6 @@ const [sets, setSets] = useState([]);
                                 }
                             >
                                 <img className={styles.basketImgBtn} src="корзина.png" alt="" />
-                                Купити
                             </button>
                         </div>
                     </div>

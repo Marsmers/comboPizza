@@ -1,5 +1,6 @@
 .cons {
 	width: 100vw;
+		min-height: 70vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,7 +59,6 @@
 }
 
 .img-card {
-	background-color: black;
 	overflow: hidden;
 	height: 25vh;
 	min-height: 25vh;
@@ -78,7 +78,6 @@
 	align-items: center;
 	justify-content: end;
 	width: 100%;
-	height: 15%;
 }
 
 .cardFooterPrice {
@@ -103,13 +102,6 @@
 	display: flex;
 }
 
-.btnSizeLeft {
-	cursor: pointer;
-	width: 50%;
-	height: 100%;
-	border-radius: 5px 0px 0px 5px;
-	font-size: medium;
-}
 
 .footerBottom button {
 	width: 35%;
@@ -129,20 +121,18 @@
 	height: 40px;
 	border-radius: 10px;
 	margin: 20px;
-	border: none;
+	border: 2px solid orange;
+	background-color: #ffaa0045;
+	color: #ffa800;
 	font-family: 'Nunito', sans-serif;
-	font-size: large;
+	font-size: 25px;
 	cursor: pointer;
 }
 
-.BtnNextPage:hover {
-	background-color: gold;
-	color: black;
-}
+
 
 .BtnNextPage:active {
 	scale: 105%;
-	transition: 0.5s;
 }
 
 .btnOrder {
@@ -177,23 +167,19 @@
 
 @media screen and (max-width: 767px) {
 	.card {
-		width: 70%;
-		height: 50vh;
+		width: 45%;
 		margin-bottom: 5px;
 	}
 	.coco {
-		margin-top: 0vh;
+		margin-top: 10vh;
+		margin-bottom: 5vh;
 		width: 100%;
 	}
 	.BtnNextPage {
 		width: 40%;
 	}
-	.img-card {
-		height: 100%;
-	}
 	.cardText {
 		height: 30%;
-		margin-top: 10px;
 	}
 	.burgerName {
 		font-size: large;
@@ -210,11 +196,10 @@
 	.cardFooterPrice {
 		font-size: small;
 	}
-	.btnOrder {
-		font-size: small;
-		padding-right: 10px;
-	}
 	.footerBottom {
-		height: 50%;
+		height: 90%;
+	}
+	.footerBottom h3{
+		font-size: large;
 	}
 }

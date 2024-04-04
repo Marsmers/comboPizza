@@ -3,12 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+        	min-height: 70vh;
     	background-image: url(/public/vecteezy_fundo-de-textura-de-pedra-preta-escura_2223734.jpg);
 }
 
 .coco {
     margin-top: 15vh;
-    width: 80%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -16,41 +17,46 @@
 }
 
 .card {
-    font-family: 'Nunito', sans-serif;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin: 1%;
-    width: 20%;
-    border-radius: 15px;
-    box-shadow: 3px 3px 10px gray;
-    font-size: 13px;
-    overflow: hidden;
+	font-family: 'Nunito', sans-serif;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	margin: 1%;
+	width: 20%;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.494);
+	font-size: 13px;
+	overflow: hidden;
 }
-.cardText{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-    height: 25%;
+.cardText {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	height: 30%;
 }
 
 .kebabName{
-    margin: 0px;
-    margin-left: 5px;
-    margin-top: 5px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: #ffa800;
+	margin-top: 5px;
+	margin-left: 5px;
+	font-size: 25px;
+	margin-bottom: 10px;
 }
-
+.kebabSpan {
+	width: 50%;
+	height: 3px;
+	background-color: #ffa800;
+}
 .ingredients{
     margin: 5px;
     color: gray;
 }
-.card:hover {
-    scale: 105%;
-    box-shadow: 5px 5px 25px gray;
-    transition: 500ms ease;
-}
+
 
 .card:hover .card-img {
     scale: 140%;
@@ -60,15 +66,15 @@
 .img-card {
     overflow: hidden;
     width: 100%;
-    height: 200px;
-    border-radius: 15px 15px 0px 0px;
+    height: 250px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 .img-card .card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 
@@ -84,12 +90,14 @@
 }
 
 .cardFooterPrice{
+    font-size: large;
     margin: 0;
     width: 50%;
     text-align: center;
 }
 
 .footerBottom{
+    font-size: large;
     width: 100%;
     height: 40%;
     display: flex;
@@ -100,7 +108,7 @@
 
 .sizeBtn{
     width: 100%;
-    height: 40%;
+    height: 50%;
     display: flex;
 
 }
@@ -108,22 +116,14 @@
 
 
 .btnSizeLeft{
-    cursor: pointer;
-    width: 50%;
-    height: 100%;
-    border-radius: 5px 0px 0px 5px;
-    font-size: medium;
-    border: 1px solid white;
+	cursor: pointer;
+	background-color: #ffaa0045;
+	width: 50%;
+	height: 100%;
+	border-radius: 5px 0px 0px 5px;
+	font-size: medium;
+	border: 1px solid white;
 }
-
-
-
-/* .btnSizeLeft:hover{
-    background-color: rgb(2, 171, 2);
-    color: white;
-    transition: 0.3s;
-    
-} */
 
 .btnSizeLeft:active{
     scale: 95%;
@@ -132,12 +132,13 @@
 }
 
 .btnSizeRigth{
-    cursor: pointer;
-    width: 50%;
-    height: 100%;
-    border-radius: 0px 5px 5px 0px;
-    font-size: medium;
-    border: 1px solid white;
+	cursor: pointer;
+	background-color: #ffaa0045;
+	width: 50%;
+	height: 100%;
+	border-radius: 0px 5px 5px 0px;
+	font-size: medium;
+	border: 1px solid white;
 }
 
 
@@ -148,20 +149,7 @@
     transition: 0.3s linear;
 }
 
-.btnCheeseCrust{
-    width: 100%;
-    height: 80%;
-    border-radius: 5px;
-    font-size: medium;
-    border: 1px solid white;
-    cursor: pointer;
-}
 
-/* .btnCheeseCrust:hover{
-    background-color: rgb(2, 171, 2);
-    color: white;
-    transition: 0.3s;
-} */
 .btnCheeseCrust:active{
     scale: 95%;
 }
@@ -180,25 +168,26 @@
 }
 
 .active{
-    background-color: rgb(2, 171, 2);
-    color: white;
-    transition: 0.3s linear;
+	background-color: orange;
+	color: white;
+	transition: 0.3s linear;
 }
 
 .BtnNextPage{
-    width: 25%;
-    height: 40px;
-    border-radius: 10px;
-    margin: 20px;
-    border: none;
-    font-family: 'Nunito', sans-serif;
-    font-size: large;
-    cursor: pointer;
+	width: 25%;
+	height: 40px;
+	border-radius: 10px;
+	margin: 20px;
+	border: 2px solid orange;
+	background-color: #ffaa0045;
+	color: #ffa800;
+	font-family: 'Nunito', sans-serif;
+	font-size: 25px;
+	cursor: pointer;
 }
 
 .BtnNextPage:hover{
-    background-color: gold;
-    color: black;
+scale: 101%;
 }
 
 .BtnNextPage:active{
@@ -207,22 +196,21 @@
 }
 
 .btnOrder{
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    padding-right: 15px;
-    font-size: larger;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	padding-right: 15px;
+	font-size: larger;
+	background-color: #ffaa0045;
 }
 
 
-.btnOrder:hover{
-    background-color: gainsboro;
-}
+
 
 .btnOrder:active{
-    margin-top: 5px;
+    background-color: #ffa800;
 }
 
 .toaster{
@@ -258,7 +246,8 @@
         height: 45vh;
     }
     .coco{
-        margin-top: 0vh;
+        margin-top: 10vh;
+        margin-bottom: 5vh;
         width: 100%;
     }
     .BtnNextPage{

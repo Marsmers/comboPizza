@@ -3,7 +3,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-		background-image: url(/public/vecteezy_fundo-de-textura-de-pedra-preta-escura_2223734.jpg);
+	min-height: 70vh;
+	background-image: url(/public/vecteezy_fundo-de-textura-de-pedra-preta-escura_2223734.jpg);
 }
 
 .coco {
@@ -20,6 +21,7 @@
 	background-color: white;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	margin: 1%;
 	width: 20%;
 	border-radius: 0px 35px 0px 35px;
@@ -40,12 +42,15 @@
 	font-size: 25px;
 	margin: 0px;
 	margin-left: 15px;
-	margin-top: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .ingredients {
-	margin: 5px;
+	font-size: larger;
 	margin-left: 15px;
+	margin-bottom: 5px;
 	color: gray;
 }
 
@@ -55,10 +60,9 @@
 }
 
 .img-card {
-	background-color: black;
 	overflow: hidden;
-	width: 105%;
-	height: 250px;
+	height: 25vh;
+	min-height: 25vh;
 	border-radius: 0px 0px 0px 30px;
 }
 
@@ -75,7 +79,7 @@
 	align-items: center;
 	justify-content: end;
 	width: 100%;
-	height: 25%;
+	height: 15%;
 }
 
 .cardFooterPrice {
@@ -83,11 +87,12 @@
 	width: 50%;
 	font-size: 20px;
 	margin-left: 20px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .footerBottom {
 	width: 100%;
-	height: 60%;
+	height: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -125,16 +130,14 @@
 	height: 40px;
 	border-radius: 10px;
 	margin: 20px;
-	border: none;
+	border: 2px solid orange;
+	background-color: #ffaa0045;
+	color: #ffa800;
 	font-family: 'Nunito', sans-serif;
-	font-size: large;
+	font-size: 25px;
 	cursor: pointer;
 }
 
-.BtnNextPage:hover {
-	background-color: gold;
-	color: black;
-}
 
 .BtnNextPage:active {
 	scale: 105%;
@@ -173,26 +176,22 @@
 
 @media screen and (max-width: 767px) {
 	.card {
-		width: 70%;
-		height: 50vh;
+		width: 45%;
 		margin-bottom: 5px;
 	}
 	.coco {
-		margin-top: 0vh;
 		width: 100%;
 	}
 	.BtnNextPage {
 		width: 40%;
 	}
-	.img-card {
-		height: 100%;
-	}
+
 	.cardText {
-		height: 30%;
-		margin-top: 10px;
+		height: 30%;;
 	}
 	.snackName {
 		font-size: large;
+		margin-top: 10px;;
 	}
 	.ingredients {
 		font-size: small;
@@ -204,13 +203,12 @@
 		font-size: small;
 	}
 	.cardFooterPrice {
-		font-size: small;
+		font-size: large;
 	}
 	.btnOrder {
 		font-size: small;
-		padding-right: 10px;
 	}
 	.footerBottom {
-		height: 50%;
+		height: 100%;
 	}
 }

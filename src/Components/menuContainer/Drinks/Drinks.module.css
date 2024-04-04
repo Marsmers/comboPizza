@@ -1,287 +1,211 @@
 .cons {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    	background-image: url(/public/vecteezy_fundo-de-textura-de-pedra-preta-escura_2223734.jpg);
+	width: 100vw;
+	display: flex;
+	min-height: 70vh;
+	justify-content: center;
+	align-items: center;
+	background-image: url(/public/vecteezy_fundo-de-textura-de-pedra-preta-escura_2223734.jpg);
 }
 
 .coco {
-    margin-top: 15vh;
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	margin-top: 15vh;
+	width: 90%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .card {
-    font-family: 'Nunito', sans-serif;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin: 1%;
-    width: 20%;
-    border-radius: 15px;
-    box-shadow: 3px 3px 10px gray;
-    font-size: 13px;
-    overflow: hidden;
-}
-.cardText{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    height: 25%;
+	font-family: 'Nunito', sans-serif;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 1%;
+	width: 20%;
+	border-radius: 0px 35px 0px 35px;
+	font-size: 13px;
+	overflow: hidden;
+	box-shadow: 9px 7px 21px -12px rgba(0, 0, 0, 0.75);
 }
 
-.drinkName{
-    margin-left: 5px;
-    margin-top: 5px;
+.cardText {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.ingredients{
-    margin: 5px;
-    color: gray;
+.drinkName {
+	font-size: 25px;
+	margin: 0px;
+	margin-left: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.card:hover {
-    scale: 105%;
-    box-shadow: 5px 5px 25px gray;
-    transition: 500ms ease;
+
+.ingredients {
+	margin: 5px;
+	color: gray;
 }
 
 .card:hover .card-img {
-    scale: 140%;
-    transition: 500ms ease;
+	scale: 140%;
+	transition: 500ms ease;
 }
 
 .img-card {
-    overflow: hidden;
-    width: 100%;
-    height: 250px;
-    border-radius: 15px 15px 0px 0px;
+	overflow: hidden;
+	width: 100%;
+	height: 250px;
+	border-radius: 15px 15px 0px 0px;
 }
 
 .img-card .card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: 10px 10px 0px 0px;
 }
-
-
-
 
 .footerCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-    width: 100%;
-    height: 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+	width: 100%;
+	height: 15%;
 }
 
-.cardFooterPrice{
-    margin: 0;
-    width: 50%;
-    text-align: center;
+.cardFooterPrice {
+	margin: 0;
+	width: 50%;
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.footerBottom{
-    width: 100%;
-    height: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footerBottom {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-
-
-
-.btnSizeLeft{
-    cursor: pointer;
-    width: 50%;
-    height: 100%;
-    border-radius: 5px 0px 0px 5px;
-    font-size: medium;
-    border: 1px solid white;
+.footerBottom button {
+	width: 35%;
+	height: 100%;
+	border-radius: 40px 0px 0px 0px;
 }
-
-
-
-/* .btnSizeLeft:hover{
-    background-color: rgb(2, 171, 2);
-    color: white;
-    transition: 0.3s;
-    
-} */
-
-.btnSizeLeft:active{
-    scale: 95%;
-    color: white;
-    transition: 0.3s linear;
-}
-
-.btnSizeRigth{
-    cursor: pointer;
-    width: 50%;
-    height: 100%;
-    border-radius: 0px 5px 5px 0px;
-    font-size: medium;
-    border: 1px solid white;
-}
-
-
-
-.btnSizeRigth:active{
-    scale: 95%;
-    color: white;
-    transition: 0.3s linear;
-}
-
-.btnCheeseCrust{
-    width: 100%;
-    height: 80%;
-    border-radius: 5px;
-    font-size: medium;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-/* .btnCheeseCrust:hover{
-    background-color: rgb(2, 171, 2);
-    color: white;
-    transition: 0.3s;
-} */
-.btnCheeseCrust:active{
-    scale: 95%;
-}
-
-.footerBottom button{
-    width: 50%;
-    height: 100%;
-}
-
 
 .basketImgBtn {
-    object-fit: contain;
-    width: 70%;
-    height: 70%;
-    z-index: 1;
+	object-fit: contain;
+	width: 65%;
+	height: 65%;
+	z-index: 1;
 }
 
-.active{
-    background-color: rgb(2, 171, 2);
-    color: white;
-    transition: 0.3s linear;
+.BtnNextPage {
+	width: 25%;
+	height: 40px;
+	border-radius: 10px;
+	margin: 20px;
+	border: 2px solid orange;
+	background-color: #ffaa0045;
+	color: #ffa800;
+	font-family: 'Nunito', sans-serif;
+	font-size: 25px;
+	cursor: pointer;
 }
 
-.BtnNextPage{
-    width: 25%;
-    height: 40px;
-    border-radius: 10px;
-    margin: 20px;
-    border: none;
-    font-family: 'Nunito', sans-serif;
-    font-size: large;
-    cursor: pointer;
+.BtnNextPage:hover {
+	scale: 101%;
 }
 
-.BtnNextPage:hover{
-    background-color: gold;
-    color: black;
+.BtnNextPage:active {
+	scale: 105%;
+	transition: 0.5s;
 }
 
-.BtnNextPage:active{
-    scale: 105%;
-    transition: 0.5s ;
+.btnOrder {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	box-shadow: 1px 5px 10px black;
+	background-color: #ff7a14;
 }
 
-.btnOrder{
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    padding-right: 15px;
-    font-size: larger;
+.btnOrder:active {
+	background-color: #dd6c15;
 }
 
-
-.btnOrder:hover{
-    background-color: gainsboro;
+.toaster {
+	font-family: 'Nunito', sans-serif;
+	text-align: center;
 }
-
-.btnOrder:active{
-    margin-top: 5px;
-}
-
-.toaster{
-    font-family: 'Nunito', sans-serif;
-    text-align: center;
-}
-
-
 
 @media screen and (max-width: 1024px) {
-    .card{
-        width: 30%;
-    }
+	.card {
+		width: 30%;
+	}
 
-    .coco{
-        margin-top: 10vh;
-        width: 100%;
-    }
-    
+	.coco {
+		margin-top: 10vh;
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 767px) {
-    .card{
-        width: 45%;
-        height: 45vh;
-        margin-bottom: 5px;
-    }
-    .coco{
-        margin-top: 0vh;
-        width: 100%;
-    }
-    .BtnNextPage{
-        width: 40%;
-    }
-    .card-img{
-        height: 250px;
-    }
-    .img-card{
-        height: 100%;
-    }
-    .cardText{
-        height: 30%;
-        margin-top: 10px;
-    }
-    .drinkName{
-        font-size: medium;
-        margin-bottom: 0;
-    }
-    .ingredients{
-        font-size: small;
-    }
-    .btnSizeLeft{
-        font-size: small;
-    }
-    .btnSizeRigth{
-        font-size: small;
-    }
-    .cardFooterPrice{
-        font-size: small;
-    }
-    .btnOrder{
-        font-size: small;
-        padding-right: 10px;
-    }
-    .footerCard{
-        height: 10%;
-    }
-    .footerBottom{
-        height: 100%;
-    }
+	.card {
+		width: 45%;
+		height: 45vh;
+		margin-bottom: 5px;
+	}
+	.coco {
+		width: 100%;
+		margin-bottom: 5vh;
+	}
+	.BtnNextPage {
+		width: 40%;
+	}
+	.card-img {
+		height: 250px;
+	}
+	.img-card {
+		height: 100%;
+	}
+	.cardText {
+		height: 30%;
+		margin-top: 10px;
+	}
+	.drinkName {
+		font-size: medium;
+		margin-bottom: 0;
+	}
+	.ingredients {
+		font-size: small;
+	}
+	.btnSizeLeft {
+		font-size: small;
+	}
+	.btnSizeRigth {
+		font-size: small;
+	}
+	.cardFooterPrice {
+		font-size: large;
+	}
+	.btnOrder {
+		font-size: small;
+	}
+	.footerCard {
+		height: 20%;
+	}
+	.footerBottom {
+		height: 100%;
+	}
 }

@@ -6,6 +6,7 @@ import styles from '../Components/menuContainer/Pizza/Pizza.module.css';
 import toast, { Toaster } from "react-hot-toast";
 
 const Func = () => {
+    window.scrollTo(0, 0)
     const [pizza, setPizza] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
