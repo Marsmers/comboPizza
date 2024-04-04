@@ -110,7 +110,11 @@ p {
 	}
 	.googleMaps {
 		width: 90%;
-		height: 25vh;
+		height: 30vh;
+	}
+	.InfoFooter{
+		visibility: hidden;
+		height: 0;
 	}
 	.logoFooter{
 		margin: 0;

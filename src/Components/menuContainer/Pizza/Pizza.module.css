@@ -232,14 +232,14 @@
 		width: 45%;
 	}
 	.coco {
-		margin-top: 10vh;
+		margin-top: 15vh;
 		width: 100%;
 	}
 	.BtnNextPage {
 		width: 40%;
+		font-size: medium;
 	}
-	.img-card {
-	}
+
 	.cardText {
 		height: 30%;
 	}
