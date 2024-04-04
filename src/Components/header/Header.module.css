@@ -116,7 +116,7 @@ a {
 }
 
 li p {
-	margin: 0.5rem;
+	margin: 1.2rem;
 	list-style: none;
 	color: white;
 	cursor: pointer;
@@ -201,7 +201,9 @@ link {
 		width: 0px;
 		height: 0px;
 	}
-
+li p {
+	margin: 0.5rem;}
+	
 	.headerLogo {
 		z-index: -100;
 		opacity: 0;

@@ -6,7 +6,6 @@ import styles from '../Components/menuContainer/Pizza/Pizza.module.css';
 import toast, { Toaster } from "react-hot-toast";
 
 const Func = () => {
-    window.scrollTo(0, 0)
     const [pizza, setPizza] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
@@ -51,7 +50,6 @@ const Func = () => {
             }));
         };
         
-        console.log(pizza)
     const setOrder = (Name, Id, Price, Image, Size, hasCheeseCrust) => {
         const existingItem = order.find(
             (item) => item.Id === Id && item.Size === Size && item.hasCheeseCrust === hasCheeseCrust
