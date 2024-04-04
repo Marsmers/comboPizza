@@ -181,15 +181,19 @@
 	}
 	.BtnNextPage {
 		width: 40%;
+		font-size: medium;
 	}
 	.cardText {
 		height: 30%;
 	}
 	.otherName {
 		font-size: large;
+		margin-top: 0px;
+		margin-bottom: 5px;
 	}
 	.ingredients {
 		font-size: small;
+		margin-top: 5px;
 	}
 	.btnSizeLeft {
 		font-size: small;

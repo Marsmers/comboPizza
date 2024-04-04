@@ -177,10 +177,12 @@
 @media screen and (max-width: 767px) {
 	.card {
 		width: 45%;
+		height: 50vh;
 		margin-bottom: 5px;
 	}
 	.coco {
 		width: 100%;
+		margin-top: 15vh;
 		margin-bottom: 5vh;
 	}
 	.BtnNextPage {
@@ -191,10 +193,14 @@
 		height: 30%;
 	}
 	.hotdogName {
-		font-size: large;
+		font-size: medium;
+		margin-top: 0;
+	}
+	.img-card{
+
 	}
 	.ingredients {
-		font-size: small;
+		font-size: x-small;
 	}
 	.btnSizeLeft {
 		font-size: small;

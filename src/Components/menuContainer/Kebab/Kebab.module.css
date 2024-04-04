@@ -243,7 +243,6 @@ scale: 101%;
 @media screen and (max-width: 767px) {
     .card{
         width: 45%;
-        height: 45vh;
     }
     .coco{
         margin-top: 10vh;
@@ -253,15 +252,15 @@ scale: 101%;
     .BtnNextPage{
         width: 40%;
     }
-    .img-card{
-        height: 50%;
-    }
     .cardText{
         height: 30%;
+        font-size: small;
         margin-top: 5px;
     }
     .kebabName{
         font-size: medium;
+        margin: 0;
+        margin-bottom: 5px;
     }
     .ingredients{
         font-size: smaller;

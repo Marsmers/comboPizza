@@ -184,13 +184,15 @@
 	}
 	.BtnNextPage {
 		width: 40%;
+		font-size: medium;
 	}
 
 	.cardText {
-		height: 30%;;
+		height: 30%;
 	}
 	.snackName {
-		font-size: large;
+		font-size: medium;
+		color: rgb(0, 0, 0);
 		margin-top: 10px;;
 	}
 	.ingredients {
