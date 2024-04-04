@@ -24,7 +24,7 @@ const Example = () => {
           <li><Link to="Інше"><p>Інше</p></Link></li>  
       <li className='bucketIcon'>
         <Link to="Корзина">
-          <img src="bucket.png" alt="" />
+          <img src="корзина.png" alt="" />
           <div className='bucektIndex'>
             <p>{order}</p>
           </div>

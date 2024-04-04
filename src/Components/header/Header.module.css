@@ -242,7 +242,9 @@ link {
 		font-family: 'Nunito', sans-serif;
 	}
 	.bucketLogo img {
-		height: 100%;
+		height: 90%;
+		position: relative;
+		bottom:  2px;
 		margin: 0;
 	}
 

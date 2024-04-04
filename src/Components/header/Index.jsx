@@ -22,7 +22,7 @@ export default function Index() {
 				</div>
 				<div className={styles.bucketLogo}>
 					<Link to='Корзина'>
-						<img src="bucket.png" alt='' />
+						<img src="корзина.png" alt='' />
 						<div className={styles.bucektIndexMob}>
 							<p>{order}</p>
 						</div>
