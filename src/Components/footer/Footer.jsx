@@ -12,7 +12,7 @@ export default function Footer() {
 					<p className={styles.InfoFooter}>
 						<span className={styles.strongFontFooter}> Наші кебаби -</span> це
 						смачне поєднання ніжного мʼяса та ароматних приправ, <br />
-						піца приготовується з гарячого хрусткого тіста та смачної начинки.
+						піца готується з гарячого хрусткого тіста та смачної начинки.
 						<br />
 						<span className={styles.strongFontFooter}>Бургери -</span>
 						нашого власного виробництва вражають своїм смаком. <br />
