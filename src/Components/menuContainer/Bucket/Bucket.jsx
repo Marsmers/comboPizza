@@ -172,10 +172,18 @@ function Bucket() {
 								)
 							)}
 							<div className={styles.totalPrice}>
+								{' '}
 								{handleDeliveryItem(isPickupSelected, calculateTotalPrice())}
 							</div>
 						</div>
-						{!isPickupSelected ? `безкоштовна доставка від 350 грн` : ''}
+						{!isPickupSelected ? (
+							<p style={{ color: 'white' }}>
+								{' '}
+								безкоштовна доставка від 350 грн
+							</p>
+						) : (
+							''
+						)}
 					</div>
 					<div className={styles.rightPage}>
 						<input
@@ -259,7 +267,9 @@ function Bucket() {
 								/>
 
 								<div className={styles.timeDiv}>
-									<p className={styles.timeText}>Час доставки :</p>
+									<p className={styles.timeText} style={{ color: 'white' }}>
+										Час доставки :
+									</p>
 
 									<input
 										className={styles.timeInput}

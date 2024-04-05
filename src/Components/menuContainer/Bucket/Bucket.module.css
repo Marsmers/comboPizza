@@ -4,7 +4,7 @@
 	min-height: 70vh;
 	justify-content: center;
 	align-items: center;
-	background-image: url(/public/vecteezy_fundo-de-textura-de-pedra-preta-escura_2223734.jpg);
+	background-image: url(vecteezy_fundo-de-textura-de-pedra-preta-escura_2223734-min.jpg);
 }
 
 .coco {
@@ -289,6 +289,12 @@ h4 {
 	.leftPage {
 		width: 95%;
 	}
+	.textBasketDel {
+		color: white;
+	}
+	.containerleftPage > div {
+		font-size: small;
+	}
 	.infoItem {
 		padding: 0;
 	}
@@ -301,7 +307,6 @@ h4 {
 	}
 	.rightPage {
 		width: 95%;
-		height: 45vh;
 	}
 	.bucketItem {
 		height: 100px;
