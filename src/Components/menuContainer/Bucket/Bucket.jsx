@@ -10,7 +10,6 @@ import toast, { Toaster } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 
 function Bucket() {
-	window.scrollTo(0, 0)
 	const order = useSelector(state => state.counter.order)
 	const dispatch = useDispatch()
 	const [name, setName] = useState('')
