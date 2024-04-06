@@ -182,11 +182,12 @@
 		height: 30%;
 	}
 	.burgerName {
-		font-size: large;
+		font-size: medium;
 		margin-bottom: 5px;
+		margin-top: 5px;
 	}
 	.ingredients {
-		font-size: smaller;
+		font-size: xx-small;
 	}
 	.btnSizeLeft {
 		font-size: small;
@@ -201,7 +202,7 @@
 		font-size: medium;
 	}
 	.footerBottom {
-		height: 90%;
+		height: 50px;
 	}
 	.footerBottom h3{
 		font-size: large;

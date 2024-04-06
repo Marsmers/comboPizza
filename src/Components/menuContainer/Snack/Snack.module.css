@@ -194,10 +194,14 @@
 	.snackName {
 		font-size: medium;
 		color: rgb(0, 0, 0);
-		margin-top: 10px;;
+		margin-top: 5px;
+		margin-bottom: 5px;
 	}
 	.ingredients {
-		font-size: small;
+		font-size: x-small;
+	}
+	.footerBottom{
+		height: 50px;
 	}
 	.btnSizeLeft {
 		font-size: small;
@@ -211,7 +215,5 @@
 	.btnOrder {
 		font-size: small;
 	}
-	.footerBottom {
-		height: 100%;
-	}
+
 }

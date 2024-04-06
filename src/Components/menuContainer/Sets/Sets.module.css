@@ -188,10 +188,10 @@
 		margin-top: 10px;
 	}
 	.setsName {
-		font-size: xx-large;
+		font-size: x-large;
 	}
 	.ingredients {
-		font-size: large;
+		font-size: medium;
 	}
 	.btnSizeLeft {
 		font-size: small;
@@ -206,6 +206,6 @@
 		font-size: small;
 	}
 	.footerBottom {
-		height: 80%;
+		height: 50px;
 	}
 }
