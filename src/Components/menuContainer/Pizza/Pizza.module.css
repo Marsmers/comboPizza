@@ -116,6 +116,7 @@
 	text-decoration: none;
 	cursor: pointer;
 	background-color: #ffaa0045;
+	color: black;
 	width: 50%;
 	height: 100%;
 	border-radius: 5px 0px 0px 5px;
@@ -150,6 +151,7 @@
 .btnCheeseCrust {
 	text-decoration: none;
 	background-color: #ffaa0045;
+	color: black;
 	width: 100%;
 	height: 80%;
 	border-radius: 5px;
