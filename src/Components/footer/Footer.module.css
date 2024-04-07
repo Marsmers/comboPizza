@@ -4,7 +4,11 @@
 	color: white;
 	display: flex;
 	align-items: center;
-background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+	background: radial-gradient(
+		circle at 24.1% 68.8%,
+		rgb(50, 50, 50) 0%,
+		rgb(0, 0, 0) 99.4%
+	);
 }
 
 .logoFooter {
@@ -100,8 +104,9 @@ p {
 @media screen and (max-width: 767px) {
 	.footer {
 		flex-direction: column;
-		min-height: 80vh;
+		min-height: 70vh;
 		justify-content: space-between;
+		padding-top: 50px;
 	}
 	.maps {
 		width: 100%;
@@ -112,27 +117,27 @@ p {
 		width: 90%;
 		height: 30vh;
 	}
-	.InfoFooter{
+	.InfoFooter {
 		visibility: hidden;
 		height: 0;
 	}
-	.logoFooter{
+	.logoFooter {
 		margin: 0;
 	}
-	.heightLeftFooter{
+	.heightLeftFooter {
 		text-align: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		margin-bottom: 20px;
 	}
-	.downLeftFooter{
+	.downLeftFooter {
 		justify-content: center;
 		align-items: center;
 		margin: 0;
 		margin-bottom: 20px;
 	}
-	.links{
+	.links {
 		justify-content: center;
 		margin: 0;
 	}

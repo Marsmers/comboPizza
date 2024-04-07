@@ -44,7 +44,7 @@ function Bucket() {
 
 		if (!isPickupSelected && total >= 350) {
 			result = 'Загальна вартість: ' + total + ' грн (безкоштовна доставка)'
-		} else if (!isPickupSelected && total < 350) {
+		} else if (!isPickupSelected && total < 300) {
 			result = `Загальна вартість: ${total + 50} грн (доставка + 50 грн)`
 		} else if (isPickupSelected) {
 			result = `Загальна вартість: ${total} грн `
@@ -178,7 +178,7 @@ function Bucket() {
 						{!isPickupSelected ? (
 							<p style={{ color: 'white' }}>
 								{' '}
-								безкоштовна доставка від 350 грн
+								безкоштовна доставка від 300 грн
 							</p>
 						) : (
 							''

@@ -39,8 +39,8 @@ export default function HomePage() {
 					<div className={styles.HomePageItemContainer}>
 						<p className={styles.firstTextItem}>Безкоштовна доставка</p>
 						<p className={styles.secondTextItem}>по місту</p>
-						<p className={styles.lastTextItem}>
-							<span className={styles.colorLastTextItem}>від 300</span>
+						<p className={styles.lastTextItem}> від 
+							<span className={styles.colorLastTextItem}> 300</span>
 							грн
 						</p>
 					</div>
