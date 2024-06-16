@@ -7,6 +7,7 @@ import '../slider/slider.css';
 
 import Slider from "react-slick";
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Responsive extends Component {
   render() {
@@ -45,39 +46,51 @@ export default class Responsive extends Component {
       ]
     };
 
+
+
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+  }
+
+
   return (
 		<div className={styles.sliderContainer}>
 			<Slider {...settings}>
-				{/* <div className={styles.contentBox}>
-        <img src="https://tinypic.host/images/2023/12/07/ZNMOK-EKRANA-2023-12-08-O-00.03.23.png" alt=""/>
-        </div> */}
 				<div className={styles.contentBox}>
-					<img
+        <Link to='Комбо-меню' onClick={scrollToTop}>
+					<img 
 						className={styles.imgSlider}
-						src='https://tinypic.host/images/2023/12/13/ZNMOK-EKRANA-2023-12-08-O-00.00.07-1.png'
+						src='https://tinypic.host/images/2024/06/14/ZNMOK-EKRANA-2024-06-14-O-20.32.23.png'
 						alt=''
 					/>
+         </Link>
 				</div>
 				<div className={styles.contentBox}>
+        <Link to='Комбо-меню' onClick={scrollToTop}>
+					<img
+						className={styles.imgSlider}
+						src='https://tinypic.host/images/2024/06/14/ZNMOK-EKRANA-2024-06-14-O-20.34.18.png'
+						alt=''
+					/>
+            </Link>
+				</div>
+				<div className={styles.contentBox}>
+        <Link to='Комбо-меню' onClick={scrollToTop}>
+					<img
+						className={styles.imgSlider}
+						src='https://tinypic.host/images/2024/06/14/ZNMOK-EKRANA-2024-06-14-O-20.36.05.png'
+						alt=''
+					/>
+            </Link>
+				</div>
+				<div className={styles.contentBox}>
+        <Link to='Піца' onClick={scrollToTop}>
 					<img
 						className={styles.imgSlider}
 						src='https://tinypic.host/images/2023/12/13/photo_5442757534915089224_y-1.jpeg'
 						alt=''
 					/>
-				</div>
-				<div className={styles.contentBox}>
-					<img
-						className={styles.imgSlider}
-						src='https://tinypic.host/images/2023/12/13/SZOSDafa1d850c07dfa21-1.png'
-						alt=''
-					/>
-				</div>
-				<div className={styles.contentBox}>
-					<img
-						className={styles.imgSlider}
-						src='https://tinypic.host/images/2023/12/13/SZOSDafa1d850c07dfa21-1.png'
-						alt=''
-					/>
+                 </Link>
 				</div>
 			</Slider>
 		</div>

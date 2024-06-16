@@ -3,6 +3,16 @@ import styles from '../HomePage/HomePage.module.css'
 import Slider from '../slider/Slider.jsx'
 
 export default function HomePage() {
+
+
+	const scrollToTop = () => {
+		window.scrollTo(0, 0);
+}
+
+
+
+
+
 	return (
 		<div className={styles.cons}>
 			<div className={styles.coco}>
@@ -40,14 +50,14 @@ export default function HomePage() {
 						<p className={styles.firstTextItem}>Безкоштовна доставка</p>
 						<p className={styles.secondTextItem}>по місту</p>
 						<p className={styles.lastTextItem}> від 
-							<span className={styles.colorLastTextItem}> 300</span>
+							<span className={styles.colorLastTextItem}> 400</span>
 							грн
 						</p>
 					</div>
 				</div>
 				<div className={styles.boxMenuLink}>
 					<div className={styles.pizza}>
-						<Link to='Піца'>
+						<Link to='Піца' onClick={scrollToTop}>
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
@@ -66,7 +76,7 @@ export default function HomePage() {
 						</Link>
 					</div>
 					<div className={styles.burger}>
-						<Link to='Бургери'>
+						<Link to='Бургери' onClick={scrollToTop}>
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
@@ -85,7 +95,7 @@ export default function HomePage() {
 						</Link>
 					</div>
 					<div className={styles.kebab}>
-						<Link to='Кебаби'>
+						<Link to='Кебаби' onClick={scrollToTop}>
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
@@ -104,7 +114,7 @@ export default function HomePage() {
 						</Link>
 					</div>
 					<div className={styles.snack}>
-						<Link to='Снеки'>
+						<Link to='Снеки' onClick={scrollToTop}>
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
@@ -122,8 +132,8 @@ export default function HomePage() {
 							/>
 						</Link>
 					</div>
-					<div className={styles.salad}>
-						<Link to='Хот-доги'>
+					<div className={styles.salad} >
+						<Link to='Хот-доги' onClick={scrollToTop}>
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
@@ -142,7 +152,7 @@ export default function HomePage() {
 						</Link>
 					</div>
 					<div className={styles.sets}>
-						<Link to='Комбо-меню'>
+						<Link to='Комбо-меню' onClick={scrollToTop}>
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
@@ -161,7 +171,7 @@ export default function HomePage() {
 						</Link>
 					</div>
 					<div className={styles.drinks}>
-						<Link to='Напої'>
+						<Link to='Напої' onClick={scrollToTop}>
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}
@@ -180,7 +190,7 @@ export default function HomePage() {
 						</Link>
 					</div>
 					<div className={styles.other}>
-						<Link to='Інше'>
+						<Link to='Інше' onClick={scrollToTop}>
 							<div className={styles.boxMenuLinkContainer}>
 								<img
 									className={styles.boxMenuIcon}

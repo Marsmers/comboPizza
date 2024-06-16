@@ -11,7 +11,7 @@ const FuncBurger = () => {
     const [totalPages, setTotalPages] = useState(0);
     const order = useSelector((state) => state.counter.order);
     const dispatch = useDispatch();
-
+    console.log(burger);
     useEffect(() => {
         axios
             .get("https://kombo-939008f7ecb9.herokuapp.com/public/product?direction=ASC&page=0&productType=BURGER&size=8")

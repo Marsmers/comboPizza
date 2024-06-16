@@ -10,6 +10,7 @@
 
 .coco {
 	margin-top: 15vh;
+	min-height: 70vh;
 	width: 90%;
 	height: 100%;
 	display: flex;
@@ -39,6 +40,7 @@
 	justify-content: start;
 	align-items: center;
 	height: 25%;
+	max-height: 20%;
 }
 
 .pizzaName {
@@ -238,6 +240,7 @@
 @media screen and (max-width: 767px) {
 	.card {
 		width: 45%;
+		height: 400px;
 	}
 	.coco {
 		margin-top: 15vh;
