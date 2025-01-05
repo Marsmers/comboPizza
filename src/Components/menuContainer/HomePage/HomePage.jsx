@@ -50,7 +50,7 @@ export default function HomePage() {
 						<p className={styles.firstTextItem}>Безкоштовна доставка</p>
 						<p className={styles.secondTextItem}>по місту</p>
 						<p className={styles.lastTextItem}> від 
-							<span className={styles.colorLastTextItem}> 400</span>
+							<span className={styles.colorLastTextItem}> 500</span>
 							грн
 						</p>
 					</div>

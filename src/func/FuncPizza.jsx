@@ -13,8 +13,7 @@ const Func = () => {
 	const [cheeseCrusts, setCheeseCrusts] = useState({})
 	const order = useSelector(state => state.counter.order)
 	const dispatch = useDispatch()
-	const cheeseCrustPrice = { '35см': 45, '47см': 75 }
-
+	const cheeseCrustPrice = { '35см': 60, '47см': 90 }
 	useEffect(() => {
 		axios
 			.get(
@@ -119,7 +118,7 @@ const Func = () => {
 	}, [pizza])
 
 	const pizzaPrice = (size, pizza) => {
-		return size === '35см' ? pizza.price : pizza.productVariants[0].price
+		return size === '35см' ? pizza.price+10 : pizza.productVariants[0].price+10;
 	}
 
 	return (

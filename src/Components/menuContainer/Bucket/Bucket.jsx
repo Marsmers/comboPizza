@@ -42,9 +42,9 @@ function Bucket() {
 	const handleDeliveryItem = (isPickupSelected, total) => {
 		let result = ''
 
-		if (!isPickupSelected && total >= 400) {
+		if (!isPickupSelected && total >= 500) {
 			result = 'Загальна вартість: ' + total + ' грн (безкоштовна доставка)'
-		} else if (!isPickupSelected && total < 400) {
+		} else if (!isPickupSelected && total < 500) {
 			result = `Загальна вартість: ${total + 50} грн (доставка + 50 грн)`
 		} else if (isPickupSelected) {
 			result = `Загальна вартість: ${total} грн `
@@ -178,7 +178,7 @@ function Bucket() {
 						{!isPickupSelected ? (
 							<p style={{ color: 'white' }}>
 								{' '}
-								безкоштовна доставка від 400 грн
+								безкоштовна доставка від 500 грн
 							</p>
 						) : (
 							''
